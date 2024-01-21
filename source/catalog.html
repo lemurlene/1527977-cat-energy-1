@@ -3,19 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
-  <body class="page__body">
+  <body class="page-body">
     <header class="main-header">
       <a class="main-header__logo logo" href="index.html">
         <img class="main-header__logo-img" src="img/logo/logo-pic-mobile.svg"
-        width="33" height="38" aria-hidden="true"
-        alt="Часть логотипа: котик. Ссылка на главную.">
-        <img class="main-header__logo-img" src="img/logo/logo-text.svg"
-        width="101" height="18" aria-hidden="true"
-        alt="Часть логотипа: текст Кэт энерджи. Ссылка на главную.">
+        width="190" height="38" aria-hidden="true"
+        alt="Логотип Кэт энерджи - ссылка на главную.">
       </a>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">
+        <button class="main-nav__toggle toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <ul class="main-nav__list">
@@ -37,10 +35,10 @@
         </ul>
       </nav>
     </header>
-    <main class="page-catalog">
-      <h1>Каталог продукции</h1>
+    <main class="catalog">
+      <h1 class="catalog__title">Каталог продукции</h1>
       <section class="catalog-main">
-        <h2 class="catalog-main__caption">Основные товары</h2>
+        <h2 class="visually-hidden">Основные товары</h2>
         <ul class="catalog-main__list products">
           <li class="products__card product">
             <a class="product__link" href="#">
@@ -53,26 +51,32 @@
                 Cat Energy PRO 500 г
               </h3>
             </a>
-            <dl>
-              <dt>
-                Масса
-              </dt>
-              <dd>
-                500 г
-              </dd>
-              <dt>
-                Вкус
-              </dt>
-              <dd>
-                Курица
-              </dd>
-              <dt>
-                Цена
-              </dt>
-              <dd>
-                700 ₽
-              </dd>
-            </dl>
+            <table class="product__table">
+              <tr class="product__info">
+                <td class="product__parameter">
+                  Масса
+                </td>
+                <td class="product__value">
+                  500 г
+                </td>
+              </tr>
+              <tr>
+                <td class="product__parameter">
+                  Вкус
+                </td>
+                <td class="product__value">
+                  Курица
+                </td>
+              </tr>
+              <tr>
+                <td class="product__parameter">
+                  Цена
+                </td>
+                <td class="product__value">
+                  700 ₽
+                </td>
+              </tr>
+            </table>
             <a class="button product__button" href="#">
               Заказать
             </a>
@@ -88,26 +92,32 @@
                 Cat Energy PRO 1000 г
               </h3>
             </a>
-            <dl>
-              <dt>
-                Масса
-              </dt>
-              <dd>
-                1000 г
-              </dd>
-              <dt>
-                Вкус
-              </dt>
-              <dd>
-                Курица
-              </dd>
-              <dt>
-                Цена
-              </dt>
-              <dd>
-                1000 ₽
-              </dd>
-            </dl>
+            <table class="product__table">
+              <tr class="product__info">
+                <td class="product__parameter">
+                  Масса
+                </td>
+                <td class="product__value">
+                  1000 г
+                </td>
+              </tr>
+              <tr>
+                <td class="product__parameter">
+                  Вкус
+                </td>
+                <td class="product__value">
+                  Курица
+                </td>
+              </tr>
+              <tr>
+                <td class="product__parameter">
+                  Цена
+                </td>
+                <td class="product__value">
+                  1000 ₽
+                </td>
+              </tr>
+            </table>
             <a class="button product__button" href="#">
               Заказать
             </a>
@@ -123,26 +133,32 @@
                 Cat Energy PRO 500 г
               </h3>
             </a>
-            <dl>
-              <dt>
-                Масса
-              </dt>
-              <dd>
-                500 г
-              </dd>
-              <dt>
-                Вкус
-              </dt>
-              <dd>
-                Рыба
-              </dd>
-              <dt>
-                Цена
-              </dt>
-              <dd>
-                700 ₽
-              </dd>
-            </dl>
+            <table class="product__table">
+              <tr class="product__info">
+                <td class="product__parameter">
+                  Масса
+                </td>
+                <td class="product__value">
+                  500 г
+                </td>
+              </tr>
+              <tr>
+                <td class="product__parameter">
+                  Вкус
+                </td>
+                <td class="product__value">
+                  Рыба
+                </td>
+              </tr>
+              <tr>
+                <td class="product__parameter">
+                  Цена
+                </td>
+                <td class="product__value">
+                  700 ₽
+                </td>
+              </tr>
+            </table>
             <a class="button product__button" href="#">
               Заказать
             </a>
@@ -158,26 +174,32 @@
                 Cat Energy PRO 1000 г
               </h3>
             </a>
-            <dl>
-              <dt>
-                Масса
-              </dt>
-              <dd>
-                1000 г
-              </dd>
-              <dt>
-                Вкус
-              </dt>
-              <dd>
-                Рыба
-              </dd>
-              <dt>
-                Цена
-              </dt>
-              <dd>
-                1000 ₽
-              </dd>
-            </dl>
+            <table class="product__table">
+              <tr class="product__info">
+                <td class="product__parameter">
+                  Масса
+                </td>
+                <td class="product__value">
+                  1000 г
+                </td>
+              </tr>
+              <tr>
+                <td class="product__parameter">
+                  Вкус
+                </td>
+                <td class="product__value">
+                  Рыба
+                </td>
+              </tr>
+              <tr>
+                <td class="product__parameter">
+                  Цена
+                </td>
+                <td class="product__value">
+                  1000 ₽
+                </td>
+              </tr>
+            </table>
             <a class="button product__button" href="#">
               Заказать
             </a>
@@ -193,26 +215,32 @@
                 Cat Energy SLIM 500 г
               </h3>
             </a>
-            <dl>
-              <dt>
-                Масса
-              </dt>
-              <dd>
-                500 г
-              </dd>
-              <dt>
-                Вкус
-              </dt>
-              <dd>
-                Гречка
-              </dd>
-              <dt>
-                Цена
-              </dt>
-              <dd>
-                400 ₽
-              </dd>
-            </dl>
+            <table class="product__table">
+              <tr class="product__info">
+                <td class="product__parameter">
+                  Масса
+                </td>
+                <td class="product__value">
+                  500 г
+                </td>
+              </tr>
+              <tr>
+                <td class="product__parameter">
+                  Вкус
+                </td>
+                <td class="product__value">
+                  Гречка
+                </td>
+              </tr>
+              <tr>
+                <td class="product__parameter">
+                  Цена
+                </td>
+                <td class="product__value">
+                  400 ₽
+                </td>
+              </tr>
+            </table>
             <a class="button product__button" href="#">
               Заказать
             </a>
@@ -228,26 +256,32 @@
                 Cat Energy SLIM 1000 г
               </h3>
             </a>
-            <dl>
-              <dt>
-                Масса
-              </dt>
-              <dd>
-                1000 г
-              </dd>
-              <dt>
-                Вкус
-              </dt>
-              <dd>
-                Гречка
-              </dd>
-              <dt>
-                Цена
-              </dt>
-              <dd>
-                700 ₽
-              </dd>
-            </dl>
+            <table class="product__table">
+              <tr class="product__info">
+                <td class="product__parameter">
+                  Масса
+                </td>
+                <td class="product__value">
+                  1000 г
+                </td>
+              </tr>
+              <tr>
+                <td class="product__parameter">
+                  Вкус
+                </td>
+                <td class="product__value">
+                  Гречка
+                </td>
+              </tr>
+              <tr>
+                <td class="product__parameter">
+                  Цена
+                </td>
+                <td class="product__value">
+                  700 ₽
+                </td>
+              </tr>
+            </table>
             <a class="button product__button" href="#">
               Заказать
             </a>
@@ -263,38 +297,46 @@
                 Cat Energy SLIM 500 г
               </h3>
             </a>
-            <dl>
-              <dt>
-                Масса
-              </dt>
-              <dd>
-                500 г
-              </dd>
-              <dt>
-                Вкус
-              </dt>
-              <dd>
-                Рис
-              </dd>
-              <dt>
-                Цена
-              </dt>
-              <dd>
-                500 ₽
-              </dd>
-            </dl>
+            <table class="product__table">
+              <tr class="product__info">
+                <td class="product__parameter">
+                  Масса
+                </td>
+                <td class="product__value">
+                  500 г
+                </td>
+              </tr>
+              <tr>
+                <td class="product__parameter">
+                  Вкус
+                </td>
+                <td class="product__value">
+                  Рис
+                </td>
+              </tr>
+              <tr>
+                <td class="product__parameter">
+                  Цена
+                </td>
+                <td class="product__value">
+                  500 ₽
+                </td>
+              </tr>
+            </table>
             <a class="button product__button" href="#">
               Заказать
             </a>
           </li>
           <li class="products__card product product--more">
-            <h3 class="product__title">
-              Показать еще 100500 товаров
-            </h3>
+            <a class="product__link" href="#">
+              <h3 class="product__title product__title--more">
+                Показать еще 100500 товаров
+              </h3>
+            </a>
             <p class="product__text">
               На самом деле вкусов гораздо больше!
             </p>
-            <a class="button product__button product__button__more" href="#">
+            <a class="button product__button product__button--more" href="#">
               Показать все
             </a>
           </li>
@@ -360,20 +402,19 @@
             </a>
           </li>
         </ul>
-        <aside class="page-catalog__gift gift">
+        <aside class="catalog__gift gift">
           <img class="gift__img" src="img/pictures/gift.jpg"
           width="280" height="290" aria-hidden="true"
           alt="Рюкзак с иллюминатором">
           <div class="gift__text">
             Закажите все и получите чехол для кота в подарок!
           </div>
-
         </aside>
       </section>
     </main>
     <footer class="main-footer">
       <div class="main-footer__contacts contacts">
-        <div class=" contacts__text">
+        <div class="contacts__text">
           <p class="contacts__intro">
             Приглашаем к сотрудничеству дилеров!
           </p>
@@ -383,14 +424,14 @@
           </p>
         </div>
         <div class="contacts__map">
-          <iframe src="https://yandex.ru/map-widget/v1/?from=mapframe&ll=30.323036%2C59.938631&mode=whatshere&source=mapframe&um=constructor%3Ac5458dd3ee51824c380a253632b8d3a35b8c840df45701f2b4c5b1e36a7abd59&utm_source=share&whatshere%5Bpoint%5D=30.323037%2C59.938631&whatshere%5Bzoom%5D=17&z=16">
+          <iframe class="contacts__map-iframe" src="https://yandex.ru/map-widget/v1/?from=mapframe&ll=30.323036%2C59.938631&mode=whatshere&source=mapframe&um=constructor%3Ac5458dd3ee51824c380a253632b8d3a35b8c840df45701f2b4c5b1e36a7abd59&utm_source=share&whatshere%5Bpoint%5D=30.323037%2C59.938631&whatshere%5Bzoom%5D=17&z=16">
           </iframe>
         </div>
       </div>
-      <a class="main-footer__logo logo" href="index.html">
+      <a class="main-footer__logo logo logo--disabled" href="#" aria-current="page">
         <img class="main-footer__logo-img" src="img/logo/logo-text.svg"
         width="128" height="24" aria-hidden="true"
-        alt="Логотип Кэт энерджи. Ссылка на главную.">
+        alt="Логотип Кэт энерджи.">
       </a>
       <section class="social">
         <h2 class="visually-hidden">Мы в соцсетях</h2>
@@ -420,13 +461,12 @@
       </section>
       <section class="copyright">
         <h2 class="visually-hidden">Копирайт</h2>
-        <a class="copyright__link-text" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="noreferrer noopener">
-          HTML Academy
-        </a>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="noreferrer noopener">
-          <img class="copyright__logo" src=""
-          width="93" height="27" aria-hidden="true"
-          alt="Логотип html-academy.">
+          HTML Academy
+          <svg class="copyright__logo"
+           width="93" height="27" aria-hidden="true"
+            <use href=""></use>
+          </svg>
         </a>
       </section>
     </footer>
