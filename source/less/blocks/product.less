@@ -1,0 +1,39 @@
+.product {
+  padding: 20px 20px 25px;
+}
+
+.product__link {
+  color: @special-dark-150;
+}
+
+.product__title {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.product__title--more {
+  color: @special-dark-100;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -55px;
+    width: 30px;
+    height: 30px;
+    background-image: url("../../img/products/plus.svg");
+  }
+}
+
+.product__table,
+.product__text {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.product__button--more {
+  color: @special-dark-200;
+  background-color: @basic-background-100;
+}

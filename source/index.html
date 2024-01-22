@@ -3,19 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
-  <body class="page__body">
+  <body class="page-body">
     <header class="main-header">
       <a class="main-header__logo logo logo--disabled" href="#" aria-current="page">
         <img class="main-header__logo-img" src="img/logo/logo-pic-mobile.svg"
-        width="33" height="38" aria-hidden="true"
-        alt="Часть логотипа: котик.">
-        <img class="main-header__logo-img" src="img/logo/logo-text.svg"
-        width="101" height="18" aria-hidden="true"
-        alt="Часть логотипа: текст Кэт энерджи.">
+        width="190" height="38" aria-hidden="true"
+        alt="Логотип Кэт энерджи.">
       </a>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">
+        <button class="main-nav__toggle toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <ul class="main-nav__list">
@@ -43,10 +41,12 @@
         <p class="hero__slogan">
           Занялся собой? Займись котом!
         </p>
-        <img class="hero__img" src="img/products/chicken-500gr--hero.png"
-        width="280" height="270"
-        alt="500 грамм корма в банке с жёлто-оранжевой этикеткой на блюде с курицей.">
-        <a class="hero__button" href="form.html">
+        <picture class="hero__picture">
+          <img class="hero__img" src="img/products/chicken-500--hero.png"
+          width="280" height="270"
+          alt="500 грамм корма в банке с жёлто-оранжевой этикеткой на блюде с курицей.">
+        </picture>
+        <a class="hero__button button" href="form.html">
           Подобрать программу
         </a>
       </div>
@@ -75,7 +75,7 @@
           </li>
         </ul>
       </section>
-      <div class="features">
+      <section class="features">
         <h3 class="features__title">Как это работает</h3>
         <ol class="features__list">
           <li class="features__item">
@@ -90,8 +90,8 @@
             Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
           </li>
         </ol>
-      </div>
-      <div class="example">
+      </section>
+      <section class="example">
         <h3 class="example__title">Живой пример</h3>
         <p class="example__text">
           Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
@@ -111,10 +111,10 @@
           <dd class="example__definition">
             60 дней
           </dd>
-          <dt class="example__term">
+          <dt class="example__term example__term--cost">
             Затраты на питание:
           </dt>
-          <dd class="example__definition">
+          <dd class="example__definition example__definition--cost">
             15 000 руб.
           </dd>
         </dl>
@@ -146,11 +146,11 @@
             </button>
           </div>
         </div>
-      </div>
+      </section>
     </main>
     <footer class="main-footer">
       <div class="main-footer__contacts contacts">
-        <div class=" contacts__text">
+        <div class="contacts__text contacts__text--main">
           <p class="contacts__intro">
             Приглашаем к сотрудничеству дилеров!
           </p>
@@ -160,14 +160,14 @@
           </p>
         </div>
         <div class="contacts__map">
-          <iframe src="https://yandex.ru/map-widget/v1/?from=mapframe&ll=30.323036%2C59.938631&mode=whatshere&source=mapframe&um=constructor%3Ac5458dd3ee51824c380a253632b8d3a35b8c840df45701f2b4c5b1e36a7abd59&utm_source=share&whatshere%5Bpoint%5D=30.323037%2C59.938631&whatshere%5Bzoom%5D=17&z=16">
+          <iframe class="contacts__map-iframe" src="https://yandex.ru/map-widget/v1/?from=mapframe&ll=30.323036%2C59.938631&mode=whatshere&source=mapframe&um=constructor%3Ac5458dd3ee51824c380a253632b8d3a35b8c840df45701f2b4c5b1e36a7abd59&utm_source=share&whatshere%5Bpoint%5D=30.323037%2C59.938631&whatshere%5Bzoom%5D=17&z=16">
           </iframe>
         </div>
       </div>
       <a class="main-footer__logo logo logo--disabled" href="#" aria-current="page">
         <img class="main-footer__logo-img" src="img/logo/logo-text.svg"
         width="128" height="24" aria-hidden="true"
-        alt="Логотип: текст Кэт энерджи.">
+        alt="Логотип Кэт энерджи.">
       </a>
       <section class="social">
         <h2 class="visually-hidden">Мы в соцсетях</h2>
@@ -197,13 +197,12 @@
       </section>
       <section class="copyright">
         <h2 class="visually-hidden">Копирайт</h2>
-        <a class="copyright__link-text" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="noreferrer noopener">
-          HTML Academy
-        </a>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="noreferrer noopener">
-          <img class="copyright__logo" src=""
-          width="93" height="27" aria-hidden="true"
-          alt="Логотип html-academy.">
+          HTML Academy
+          <svg class="copyright__logo"
+           width="93" height="27" aria-hidden="true"
+            <use href=""></use>
+          </svg>
         </a>
       </section>
     </footer>
