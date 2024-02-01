@@ -1,11 +1,29 @@
+.main-nav__toggle {
+  @media (min-width: @tablet-width) {
+    .hide();
+  }
+}
+
 .main-nav__list {
   .list-reset();
+  .flex();
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    gap: 33px;
+  }
 }
 
 .main-nav__link {
-  font-family: "Oswald", sans-serif;
-  font-size: 20px;
-  line-height: 20px;
+  .Oswald-Regular();
+  .typography(20px; 20px);
+  .uppercase();
+  .padding-vertical(22px; 24px);
+  .padding-horizontal--base();
   color: @black;
-  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    .padding-horizontal(0; 0);
+  }
 }

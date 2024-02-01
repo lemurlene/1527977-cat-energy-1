@@ -1,3 +1,24 @@
+.catalog-main {
+  .padding-horizontal--base();
+}
+
 .catalog-main__list {
   .list-reset();
+
+  @media (min-width: @tablet-width) {
+    .grid(repeat(2, 1fr));
+    gap: 60px;
+    justify-items: center;
+  }
+
+  @media (min-width: @big-landscape-width) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: @laptop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 63px 80px;
+  }
 }
+
+

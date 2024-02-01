@@ -1,3 +1,22 @@
 .main-footer {
   background-color: @basic-background-100;
 }
+
+.main-footer__links {
+  .padding-horizontal--base();
+  .padding-vertical(40px; 40px);
+  .flex();
+  .layout(center; center);
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width: @tablet-width) {
+    .padding-vertical(55px; 55px);
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    .padding-vertical(66px; 66px);
+  }
+}

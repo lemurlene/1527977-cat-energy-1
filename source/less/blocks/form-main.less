@@ -1,21 +1,19 @@
 .form-main {
-  font-family: "Oswald", sans-serif;
-  text-transform: uppercase;
+  .Oswald-Regular();
+  .uppercase();
 }
 
 .form-main__title {
-  font-size: 36px;
-  line-height: 36px;
+  .heading-reset();
+  .padding-horizontal--base();
+  .typography(36px; 36px);
   color: @black;
   text-transform: none;
 }
 
 .form-main__intro {
+  .padding-horizontal--base();
+  .typography(14px; 18px);
   color: @black;
 }
 
-.form-main__note {
-  font-family: "Lato", sans-serif;
-  line-height: 16px;
-  text-transform: none;
-}
