@@ -1,5 +1,5 @@
 .page-body {
-  .Lato-Regular();
+  .Lato();
   .typography(14px; 18px);
   min-width: @phone-width;
   margin: 0;
@@ -11,26 +11,9 @@
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
-  min-width: @phone-width;
   min-height: 100vh;
   margin-right: auto;
   margin-left: auto;
-
-  @media (min-width: @tablet-width) {
-    min-width: @tablet-width;
-  }
-
-  @media (min-width: @big-landscape-width) {
-    min-width: @tablet-width;
-  }
-
-  @media (min-width: @laptop-width) {
-    min-width: @tablet-width;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: @desktop-width;
-  }
 }
 
 
