@@ -1,8 +1,9 @@
 .example {
-  .padding-horizontal--base();
   background-color: @basic-background-200;
+}
 
-  @media (min-width: @laptop-width) {
+.example__grid {
+  @media (min-width: @desktop-width) {
     .grid(1fr 1fr);
     column-gap: 80px;
   }
@@ -39,7 +40,7 @@
 }
 
 .example__slider {
-  @media (min-width: @laptop-width) {
+  @media (min-width: @desktop-width) {
     grid-column: 2;
     grid-row: 1 / 4;
   }

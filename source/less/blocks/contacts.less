@@ -1,6 +1,21 @@
-
+.contacts {
+  position: relative;
+}
 .contacts__text {
   .padding-vertical(26px; 26px);
+  .padding-horizontal--base();
+
+  @media (min-width: @tablet-width) {
+    .padding-horizontal(70px; 70px);
+  }
+
+  @media (min-width: @desktop-width) {
+    .padding-horizontal(80px; 80px);
+    .position-absolute(95px);
+    left: 110px;
+    width: 565px;
+    background-color: @white;
+  }
 }
 
 .contacts__text--main {

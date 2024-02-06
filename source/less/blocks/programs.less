@@ -5,7 +5,7 @@
     .padding-vertical(0; 37px);
   }
 
-  @media (min-width: @laptop-width) {
+  @media (min-width: @desktop-width) {
     .padding-vertical(82px; 71px);
   }
 }
@@ -13,7 +13,7 @@
 .programs__list {
   .list-reset();
 
-  @media (min-width: @laptop-width) {
+  @media (min-width: @desktop-width) {
     .grid(1fr 1fr);
     gap: 80px;
     justify-items: center;
@@ -29,12 +29,8 @@
     min-height: 372px;
   }
 
-  @media (min-width: @laptop-width) {
-    .flex();
-    max-width: 570px;
-  }
-
   @media (min-width: @desktop-width) {
+    .flex();
     min-height: 374px;
     width: 570px;
   }
@@ -42,7 +38,7 @@
   &:not(:last-of-type) {
     margin-bottom: 20px;
 
-    @media (min-width: @laptop-width) {
+    @media (min-width: @desktop-width) {
       margin-bottom: 0;
     }
   }
