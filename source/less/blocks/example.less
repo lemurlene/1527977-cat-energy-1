@@ -2,12 +2,18 @@
   background-color: @basic-background-200;
 }
 
+.example__grid {
+  @media (min-width: @desktop-width) {
+    .grid(1fr 1fr);
+    column-gap: 80px;
+  }
+}
+
 .example__title {
-  font-family: "Oswald", sans-serif;
-  font-size: 36px;
-  line-height: 40px;
+  .Oswald();
+  .typography(36px; 40px);
+  .heading-reset();
   color: @black;
-  margin-top: 0;
   margin-bottom: 40px;
 }
 
@@ -16,22 +22,26 @@
 }
 
 .example__definition {
-  font-family: "Oswald", sans-serif;
-  font-size: 24px;
-  line-height: 24px;
+  .Oswald();
+  .typography(24px; 24px);
+  .uppercase();
   color: @black;
-  text-transform: uppercase;
 }
 
 .example__term--cost {
-  font-family: "Oswald", sans-serif;
-  font-size: 14px;
-  line-height: 20px;
-  color: black;
-  text-transform: uppercase;
+  .Oswald();
+  .typography(14px; 20px);
+  .uppercase();
+  color: @black;
 }
 
 .example__definition--cost {
-  font-size: 14px;
-  line-height: 20px;
+  .typography(14px; 20px);
+}
+
+.example__slider {
+  @media (min-width: @desktop-width) {
+    grid-column: 2;
+    grid-row: 1 / 4;
+  }
 }

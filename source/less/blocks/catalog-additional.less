@@ -1,15 +1,40 @@
 .catalog-additional__caption {
-  font-family: "Oswald", sans-serif;
-  font-size: 24px;
-  line-height: 24px;
+  .heading-reset();
+  .Oswald();
+  .typography(24px; 24px);
   color: @black;
+  margin-top: 25px;
+
+  @media (min-width: @desktop-width) {
+    grid-column: 1 / 3;
+  }
+}
+
+.catalog-additional__grid {
+
+  @media (min-width: @desktop-width) {
+    .grid(896px 245px);
+    column-gap: 80px;
+    justify-content: center;
+  }
 }
 
 .catalog-additional__list {
   .list-reset();
+  .padding-vertical(35px; 35px);
+
+  @media (min-width: @desktop-width) {
+    .padding-vertical(76px; 91px);
+    .padding-horizontal(0; 0)
+  }
 }
 
-.product-additional__tare,
-.product-additional__price {
-  line-height: 14px;
+.catalog-additional__gift {
+  margin-bottom: 35px;
+
+  @media (min-width: @desktop-width) {
+    top: 76px;
+    padding: 0;
+    margin: 0;
+  }
 }

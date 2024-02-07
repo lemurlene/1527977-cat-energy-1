@@ -1,20 +1,37 @@
 .gift {
   position: relative;
+}
+
+.gift__picture {
+  position: relative;
+  display: block;
 
   &::before {
+    .position-absolute(0);
+    .before-after(100%; 100%);
     content: "";
-    position: absolute;
-    top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
     background-color: rgba(@basic-brigth, 0.85);
   }
 }
 
 .gift__text {
-  position: relative;
-  z-index: 0;
+  .position-absolute(187px);
+  .typography(16px; 20px);
+  right: 81px;
+  width: 161px;
   color: @white;
-  line-height: 20px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    top: 71px;
+    right: 155px;
+    text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 185px;
+    left: 55px;
+    text-align: center;
+  }
 }

@@ -1,12 +1,33 @@
 .features__title {
-  font-family: "Oswald", sans-serif;
-  font-size: 36px;
-  line-height: 40px;
+  .heading-reset();
+  .Oswald();
+  .typography(36px; 40px);
   color: @black;
-  margin-top: 0;
-  margin-bottom: 40px;
 }
 
 .features__list {
   .list-reset();
+  .padding-vertical(25px; 40px);
+
+  @media (min-width: @tablet-width) {
+    .padding-vertical(32px; 47px);
+    .grid(repeat(2, 1fr));
+    gap: 37px 60px;
+    min-height: 280px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .padding-vertical(32px; 69px);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 80px;
+  }
+}
+
+.features__item {
+  width: 100%;
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    max-width: 250px;
+  }
 }
