@@ -23,7 +23,7 @@
                 alt="Логотип Кэт энерджи - ссылка на главную.">
               </picture>
             </a>
-            <nav class="main-nav">
+            <nav class="main-header__nav main-nav">
               <button class="main-nav__toggle toggle" type="button">
                 <span class="visually-hidden">Открыть меню</span>
               </button>
@@ -139,14 +139,14 @@
       </main>
       <footer class="main-footer">
         <div class="main-footer__contacts contacts">
-          <div class="contacts__text container">
+          <div class="contacts__text">
             <p class="contacts__intro">
-              Приглашаем к сотрудничеству дилеров!
+              Приглашаем к&nbsp;сотрудничеству дилеров!
             </p>
-            <p class="contacts__adress">
-              ул. Большая Конюшенная, д. 19/8
-              Санкт-Петербург
-            </p>
+            <address class="contacts__address">
+              ул.&nbsp;Большая Конюшенная,&nbsp;д.&nbsp;19/8
+              <span class="contacts__address-city">Санкт-Петербург</span>
+            </address>
           </div>
           <div class="contacts__map">
             <iframe class="contacts__map-iframe" src="https://yandex.ru/map-widget/v1/?from=mapframe&ll=30.323036%2C59.938631&mode=whatshere&source=mapframe&um=constructor%3Ac5458dd3ee51824c380a253632b8d3a35b8c840df45701f2b4c5b1e36a7abd59&utm_source=share&whatshere%5Bpoint%5D=30.323037%2C59.938631&whatshere%5Bzoom%5D=17&z=16">
@@ -155,14 +155,15 @@
         </div>
         <div class="main-footer__links">
           <div class="container">
-            <div class="main-footer__links-flex">
-              <a class="main-footer__logo logo" href="index.html">
-                <img class="main-footer__logo-img" src="img/logo/logo-text.svg"
-                width="128" height="24" aria-hidden="true"
-                alt="Логотип Кэт энерджи - ссылка на главную.">
-              </a>
-              <section class="social">
-                <h2 class="visually-hidden">Мы в соцсетях</h2>
+            <ul class="main-footer__list">
+              <li class="main-footer__item">
+                <a class="main-footer__logo logo" href="index.html">
+                  <img class="logo__img" src="img/logo/logo-text.svg"
+                  width="128" height="24" aria-hidden="true"
+                  alt="Логотип Кэт энерджи - ссылка на главную.">
+                </a>
+              </li>
+              <li class="main-footer__item social">
                 <ul class="social__list">
                   <li class="social__item">
                     <a class="social__button social__button--vk" href="https://vk.com/htmlacademy" target="_blank" rel="noreferrer noopener">
@@ -186,9 +187,8 @@
                     </a>
                   </li>
                 </ul>
-              </section>
-              <section class="copyright">
-                <h2 class="visually-hidden">Копирайт</h2>
+              </li>
+              <li class="main-footer__item main-footer__item--copyright copyright">
                 <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="noreferrer noopener">
                   HTML Academy
                   <svg class="copyright__logo"
@@ -196,11 +196,12 @@
                     <use href=""></use>
                   </svg>
                 </a>
-              </section>
-            </div>
+              </li>
+            </ul>
           </div>
         </div>
       </footer>
     </div>
+    <script src="js/script.js"></script>
   </body>
 </html>

@@ -2,7 +2,7 @@
   .padding-vertical(20px; 20px);
 
   @media (min-width: @tablet-width) {
-    .padding-vertical(0; 37px);
+    .padding-vertical(0; 45px);
   }
 
   @media (min-width: @desktop-width) {
@@ -21,22 +21,27 @@
 }
 
 .programs__item {
-  .padding-horizontal(20px; 20px);
   min-height: 266px;
+  .padding-horizontal(20px; 20px);
 
   @media (min-width: @tablet-width) {
-    .padding-horizontal(52px; 52px);
+    .padding-horizontal(52px; 316px);
     min-height: 372px;
   }
 
   @media (min-width: @desktop-width) {
     .flex();
-    min-height: 374px;
+    padding-right: 62px;
+    padding-bottom: 37px;
     width: 570px;
   }
 
   &:not(:last-of-type) {
     margin-bottom: 20px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 30px;
+    }
 
     @media (min-width: @desktop-width) {
       margin-bottom: 0;

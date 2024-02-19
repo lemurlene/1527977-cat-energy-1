@@ -7,54 +7,96 @@
     url("../img/background/hero.png");
   background-repeat: no-repeat;
   background-position: center top;
+  box-shadow: 0 -178px 0 0 @white inset;
 
   @media (min-width: @tablet-width) {
     .padding-vertical(40px; 0);
     background-image: none;
     color: @black;
     text-align: left;
+    box-shadow: none;
   }
 
   @media (min-width: @desktop-width) {
     .padding-vertical(0; 52px);
-    .grid(repeat(1fr; 1fr));
-    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/background/hero-desktop.png");
+    position: relative;
+    z-index: -1;
+    margin-top: -155px;
+    padding-top: 224px;
+    min-height: 694px;
+    background-image: linear-gradient(to right, @white 720px, rgba(104, 183, 56, 0.85) 720px), url("../img/background/hero-desktop.png");
     background-repeat: no-repeat;
     background-position: right center;
+  }
+}
+
+.hero__grid {
+  @media (min-width: @tablet-width) {
+    display: grid;
+  }
+}
+
+.hero__content {
+  @media (min-width: @tablet-width) {
+    .padding-horizontal(90px; 90px);
+  }
+  @media (min-width: @desktop-width) {
+    .padding-horizontal(80px; 80px);
   }
 }
 
 .hero__title {
   .heading-reset();
   .typography(36px; 36px);
+  margin-bottom:  25px;
 
   @media (min-width: @tablet-width) {
     .typography(60px; 60px);
+    margin-bottom:  40px;
   }
 }
 
 .hero__slogan {
   .uppercase();
-  margin-bottom: 150px;
+  margin-bottom: 30px;
   line-height: 14px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 20px;
+    .typography(20px; 20px);
+    margin-top: 0;
+    margin-bottom: 50px;
   }
 }
 
 .hero__picture {
   background-size: contain;
+
+  @media (min-width: @tablet-width) {
+    order: 3;
+    z-index: -1;
+    margin-top: -83px;
+  }
+
   @media (min-width: @desktop-width) {
     grid-column: 2;
     grid-row: 1 / 4;
+    margin-left: -680px;
   }
 }
 
 .hero__img {
   display: block;
   margin: auto;
+}
+
+.hero__button {
+  margin-top: 2px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 90px;
+    margin-top: 0;
+  }
   @media (min-width: @desktop-width) {
-    margin-left: -100px;
+    margin-left: 80px;
   }
 }
