@@ -4,6 +4,23 @@
   padding: 0;
 }
 
+.form__fieldset--decor {
+  position: relative;
+
+  &::before {
+    .before-after(100%; 2px);
+    .position-absolute(-85px);
+    z-index: -1;
+    background-color: @basic-brigth;
+  }
+}
+
+.form__fieldset--decor-comit {
+  &::before {
+  top: -55px;
+  }
+}
+
 .form__legend {
   .typography(24px; 26px);
   .padding-horizontal(20px; 20px);
