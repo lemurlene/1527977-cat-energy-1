@@ -49,28 +49,30 @@
         </div>
       </header>
       <main class="form-main">
-        <div class="container">
+        <div class="form-main__container form-main__container--grid">
           <h1 class="form-main__title">Подбор программы</h1>
           <p class="form-main__intro">
             Заполните анкету, и мы подберем<br>
             программу питания для вашего кота
           </p>
-          <form class="form-main__form program-form form" id="form-main__form" action="https://echo.htmlacademy.ru" method="get">
+        </div>
+        <form class="form-main__form program-form form" id="form-main__form" action="https://echo.htmlacademy.ru" method="get">
+          <div class="form-main__container">
             <fieldset class="form__fieldset program-form__fieldset program-form__fieldset--basic">
               <legend class="visually-hidden">
                 Основная информация о коте
               </legend>
               <label class="form__label field">
                 Имя:*
-                <input class="form__input" type="text" name="cat-name" placeholder="Барсик">
+                <input class="form__input form__input--text" type="text" name="cat-name" placeholder="Барсик">
               </label>
               <label class="form__label field">
                 Вес (кг):*
-                <input class="form__input" type="text" name="cat-weight" placeholder="7">
+                <input class="form__input form__input--text" type="text" name="cat-weight" placeholder="7">
               </label>
               <label class="form__label field">
                 Возраст (лет):
-                <input class="form__input" type="text" name="cat-age" placeholder="7">
+                <input class="form__input form__input--text" type="text" name="cat-age" placeholder="7">
               </label>
             </fieldset>
             <fieldset class="form__fieldset program-form__fieldset program-form__fieldset--purpose">
@@ -78,64 +80,100 @@
                 Цель программы:
               </legend>
               <label class="form__label selector">
-                <input class="form__input" type="radio" name="program" value="slim" checked>
-                Похудение
+                <input class="selector__input selector__input--radio" type="radio" name="program" value="slim" checked>
+                <span class="selector__label">
+                  Похудение
+                </span>
               </label>
               <label class="form__label selector">
-                <input class="form__input" type="radio" name="program" value="pro">
-                Набор массы
+                <input class="selector__input selector__input--radio" type="radio" name="program" value="pro">
+                <span class="selector__label">
+                  Набор массы
+                </span>
               </label>
               <label class="form__label selector">
-                <input class="form__input" type="radio" name="program" value="advice">
-                Не знаю (Нужен ваш совет)
+                <input class="selector__input selector__input--radio" type="radio" name="program" value="advice">
+                <span class="selector__label">
+                  Не знаю (Нужен ваш совет)
+                </span>
               </label>
             </fieldset>
-            <fieldset class="form__fieldset program-form__fieldset program-form__fieldset--contact">
-              <legend class="form__legend">
-                Контактные данные (владельца кота):
+          </div>
+          <fieldset class="form__fieldset program-form__fieldset program-form__fieldset--contact">
+            <div class="wrapper-decor">
+              <legend class="form__legend form__legend--contact">
+                Контактные&nbsp;данные (владельца кота):
               </legend>
-              <label class="form__label field">
+            </div>
+            <div class="form-main__container">
+              <label class="form__label form__label--contact field">
                 E-mail:*
-                <input class="form__input" type="eaiml" name="owner-email" placeholder="kuklachev@gmail.com">
+                <input class="form__input form__input--text" type="eaiml" name="owner-email" placeholder="kuklachev@gmail.com">
+                <!-- <svg class="form__label--contact-img"
+                width="20" height="20" aria-hidden="true"
+                 <use href=""></use>
+                </svg> -->
               </label>
-              <label class="form__label field">
+              <label class="form__label form__label--contact field">
                 Телефон:*
-                <input class="form__input" type="tel" name="owner-tel" placeholder="8 (960) 900-60-90">
+                <input class="form__input form__input--text" type="tel" name="owner-tel" placeholder="8 (960) 900-60-90">
+                <!-- <svg class="form__label--contact-img"
+                width="20" height="20" aria-hidden="true"
+                 <use href=""></use>
+                </svg> -->
               </label>
-            </fieldset>
-            <fieldset class="form__fieldset program-form__fieldset program-form__fieldset--comit">
+            </div>
+          </fieldset>
+          <fieldset class="form__fieldset program-form__fieldset program-form__fieldset--comit">
+            <div class="wrapper-decor">
               <legend class="form__legend">
                 Комментарий:
               </legend>
+            </div>
+            <div class="form-main__container">
               <textarea class="form__input form__input--textarea" name="comit" placeholder="Расскажите обо всех повадках кота"></textarea>
-            </fieldset>
-            <fieldset class="form__fieldset program-form__fieldset program-form__fieldset--additionally">
-              <legend class="form__legend">
+            </div>
+          </fieldset>
+          <fieldset class="form__fieldset program-form__fieldset">
+            <div class="wrapper-decor">
+              <legend class="form__legend form__legend--additionally">
                 Дополнительно
               </legend>
+            </div>
+            <div class="form-main__container program-form__fieldset program-form__fieldset--additionally">
               <label class="form__label selector">
-                <input class="form__input" type="checkbox" name="additionally" checked>
+                <input class="selector__input selector__input--checkbox" type="checkbox" id="sweetener" name="sweetener" checked>
+                <span class="selector__label">
                 Cахарозаменитель
+                </span>
               </label>
               <label class="form__label selector">
-                <input class="form__input" type="checkbox" name="additionally">
+                <input class="selector__input selector__input--checkbox" type="checkbox" id="water" name="water">
+                <span class="selector__label">
                 Питьевая вода
+                </span>
               </label>
               <label class="form__label selector">
-                <input class="form__input" type="checkbox" name="additionally">
+                <input class="selector__input selector__input--checkbox" type="checkbox" id="milk" name="milk">
+                <span class="selector__label">
                 Молоко
+                </span>
               </label>
               <label class="form__label selector">
-                <input class="form__input" type="checkbox" name="additionally">
+                <input class="selector__input selector__input--checkbox" type="checkbox" id="vitamins" name="vitamins">
+                <span class="selector__label">
                 Витамины
+                </span>
               </label>
-            </fieldset>
+            </div>
+          </fieldset>
+          <div class="form-main__container form-main__container--footer">
             <button class="button form__button" type="submit">Отправить заявку</button>
             <p class="program-form__note">
               * — Обязательные поля
             </p>
-          </form>
-        </div>
+          </div>
+        </form>
       </main>
       <footer class="main-footer">
         <div class="main-footer__contacts contacts">

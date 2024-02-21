@@ -1,8 +1,10 @@
 const navToggle = document.querySelector(".main-nav__toggle");
 const mainNav = document.querySelector(".main-nav");
+const mainNavList = document.querySelector(".main-nav__list");
 
 mainNav.classList.add('main-nav--closed');
 navToggle.classList.add('main-nav__toggle--js');
+mainNavList.classList.add('main-nav__list--js');
 
 navToggle.addEventListener("click", (evt) => {
   evt.preventDefault();

@@ -15,21 +15,18 @@
     margin-left: 30px;
    }
 
-   @media (min-width: @tablet-width) {
-    .typography(36px; 36px);
-    margin-top: 0;
+   @media (min-width: @desktop-width) {
     margin-left: 70px;
    }
 }
 
-// .catalog-additional__grid {
+.catalog-additional__flex {
 
-//   // @media (min-width: @desktop-width) {
-//   //   .grid(896px 245px);
-//   //   column-gap: 80px;
-//   //   justify-content: center;
-//   // }
-// }
+  @media (min-width: @desktop-width) {
+    display: flex;
+    column-gap: 80px;
+  }
+}
 
 .catalog-additional__list {
   .list-reset();
@@ -40,7 +37,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    .padding-vertical(76px; 91px);
+    .padding-vertical(80px; 91px);
     .padding-horizontal(0; 0)
   }
 }
@@ -52,9 +49,7 @@
     margin-bottom: 75px;
   }
 
-  // @media (min-width: @desktop-width) {
-  //   top: 76px;
-  //   padding: 0;
-  //   margin: 0;
-  // }
+  @media (min-width: @desktop-width) {
+    padding-top: 80px;
+  }
 }
