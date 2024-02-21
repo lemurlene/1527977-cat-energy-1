@@ -47,6 +47,10 @@
   @media (min-width: @tablet-width) {
     margin-bottom: 20px;
    }
+
+   @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+   }
 }
 
 .form__input,
@@ -84,4 +88,8 @@
 
 .form__button {
   width: 100%;
+
+  @media (min-width: @desktop-width) {
+    max-width: 570px;
+   }
 }

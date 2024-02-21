@@ -49,7 +49,7 @@
         </div>
       </header>
       <main class="form-main">
-        <div class="form-main__container form-main__container--grid">
+        <div class="form-main__container">
           <h1 class="form-main__title">Подбор программы</h1>
           <p class="form-main__intro">
             Заполните анкету, и мы подберем<br>
@@ -57,7 +57,8 @@
           </p>
         </div>
         <form class="form-main__form program-form form" id="form-main__form" action="https://echo.htmlacademy.ru" method="get">
-          <div class="form-main__container">
+          <!-- Ярослав, посмори, пожалуйста, ниже - такая точечная модификация допустима, или доп.обёртку делать для декстопного грида? -->
+          <div class="form-main__container form-main__container--desktop-grid">
             <fieldset class="form__fieldset program-form__fieldset program-form__fieldset--basic">
               <legend class="visually-hidden">
                 Основная информация о коте
@@ -105,7 +106,7 @@
                 Контактные&nbsp;данные (владельца кота):
               </legend>
             </div>
-            <div class="form-main__container">
+            <div class="form-main__container form-main__container--desktop-grid">
               <label class="form__label form__label--contact field">
                 E-mail:*
                 <input class="form__input form__input--text" type="eaiml" name="owner-email" placeholder="kuklachev@gmail.com">

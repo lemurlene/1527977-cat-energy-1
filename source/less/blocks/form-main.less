@@ -20,6 +20,13 @@
   }
 }
 
+.form-main__container--desktop-grid {
+  @media (min-width: @desktop-width) {
+    .grid(repeat(2, 1fr));
+    gap: 80px;
+  }
+}
+
 .form-main__container--footer {
 
   @media (min-width: @tablet-width) {
@@ -28,9 +35,13 @@
     gap: 60px;
     padding-bottom: 60px;
   }
-}
 
-kuklachev@gmail.com
+  @media (min-width: @desktop-width) {
+    gap: 80px;
+    margin-top: -10px;
+    padding-bottom: 79px;
+  }
+}
 
 .form-main__title {
   .heading-reset();
