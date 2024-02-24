@@ -3,16 +3,117 @@
 }
 
 .program__caption {
+  .heading-reset();
+  .padding-vertical(24px; 22px);
   .Oswald();
   .typography(24px; 37px);
   .uppercase();
-  .heading-reset();
+  position: relative;
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
   color: @black;
+
+  @media (min-width: @tablet-width) {
+    .padding-vertical(77px; 24px);
+    .typography(36px; 36px);
+  }
+
+  @media (min-width: @desktop-width) {
+    .padding-vertical(67px; 60px);
+    padding-left: 25px;
+    column-gap: 87px;
+  }
+
+  &::before {
+    .before-after(50px; 50px);
+    background-color: @basic-brigth;
+    border-radius: 50%;
+
+    @media (min-width: @tablet-width) {
+      .position-absolute(167px);
+      right: -178px;
+      transform: scale(4);
+    }
+
+    @media (min-width: @desktop-width) {
+      position: static;
+      transform: scale(2);
+    }
+  }
+
+  &::after {
+    .before-after(67px; 53px);
+    .position-absolute(20px);
+    left: -9px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+    @media (min-width: @tablet-width) {
+      top: 150px;
+      left: auto;
+      right: -188px;
+      transform: scale(4);
+    }
+
+    @media (min-width: @desktop-width) {
+      transform: scale(2);
+      top: 60px;
+      left: 18px;
+    }
+  }
+}
+
+.program__caption--slim::after {
+  background-image: url("../img/icon-background/cat-slim.svg");
+}
+
+.program__caption--pro::after {
+  background-image: url("../img/icon-background/cat-pro.svg");
+
+  @media (min-width: @tablet-width) {
+    top: 165px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 65px;
+  }
+}
+
+.program__text {
+ margin: 0;
+ padding-bottom: 21px;
+ border-bottom: 1px solid @basic-background-400;
+
+  @media (min-width: @tablet-width) {
+    .typography(16px; 24px);
+    padding-bottom: 38px;
+    color: @black;
+    border-bottom: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 0;
+  }
 }
 
 .program__link {
   .Oswald();
   .typography(16px; 16px);
   .uppercase();
+  .padding-vertical(20px; 18px);
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
   color: @black;
+
+  @media (min-width: @tablet-width) {
+    .typography(20px; 20px);
+    column-gap: 25px;
+  }
+
+  &::after {
+    .before-after(32px; 10px);
+    background-image: url("../img/icon-background/arrow.svg");
+  }
 }

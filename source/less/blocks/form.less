@@ -1,37 +1,109 @@
 .form__fieldset {
-  .flex();
-  gap: 20px;
-  flex-direction: column;
   border: none;
   margin: 0;
-  padding: 0 0 24px;
+  padding: 0;
+}
+
+.form__fieldset--decor {
+  position: relative;
+
+  &::before {
+    .before-after(100%; 2px);
+    .position-absolute(-85px);
+    z-index: -1;
+    background-color: @basic-brigth;
+  }
 }
 
 .form__legend {
   .typography(24px; 26px);
+  .padding-horizontal(20px; 20px);
   margin-bottom: 35px;
   color: @black;
+  background-color: @white;
   text-transform: none;
+  width: min-content;
+
+  @media (min-width: @tablet-width) {
+    .typography(36px; 36px);
+    .padding-horizontal(40px; 40px);
+    white-space: nowrap;
+    margin-left: 30px;
+   }
+
+   @media (min-width: @desktop-width) {
+    margin-left: 70px;
+   }
 }
 
-.form__input,
-.form__input::placeholder {
-  font-family: inherit;
-  font-size: inherit;
-  color: inherit;
+.form__legend--contact {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 76px;
+   }
+}
+
+.form__legend--additionally {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 57px;
+   }
+}
+
+.form__label {
+  white-space: nowrap;
+}
+
+.form__label--contact:not(:last-of-type) {
+  margin-bottom: 14px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 20px;
+   }
+
+   @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+   }
+}
+
+.form__input {
+  .padding-vertical(10px; 10px);
+  .padding-horizontal(15px; 14px);
+  .Oswald();
+  .typography(16px; 18px);
+  color: @special-dark-200;
   text-transform: inherit;
+  cursor: pointer;
+  border: 1px solid @special-400;
+
+  @media (min-width: @tablet-width) {
+    .typography(20px; 20px);
+    .padding-horizontal(20px; 20px);
+  }
+
+  &::placeholder {
+    color: @special-dark-200;
+  }
+}
+
+.form__input--text {
+  width: 100%;
 }
 
 .form__input--textarea {
   resize: vertical;
   width: 100%;
+  min-height: 150px;
+  padding-top: 14px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 53px;
+    min-height: 175px;
+  }
 }
 
 .form__button {
   width: 100%;
 
-  @media (min-width: @tablet-width) {
-    margin-left: 70px;
-    margin-bottom: 60px;
-  }
+  @media (min-width: @desktop-width) {
+    max-width: 570px;
+   }
 }

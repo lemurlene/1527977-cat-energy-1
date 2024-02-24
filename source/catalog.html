@@ -23,7 +23,7 @@
                 alt="Логотип Кэт энерджи - ссылка на главную.">
               </picture>
             </a>
-            <nav class="main-nav">
+            <nav class="main-header__nav main-nav">
               <button class="main-nav__toggle toggle" type="button">
                 <span class="visually-hidden">Открыть меню</span>
               </button>
@@ -55,10 +55,13 @@
             <h2 class="visually-hidden">Основные товары</h2>
             <ul class="catalog-main__list products">
               <li class="products__card product">
-                <a class="product__link" href="#">
-                  <img class="product__img" src="img/products/chicken-500.png"
-                  width="68" height="86"
-                  alt="500 грамм корма в банке с жёлто-оранжевой этикеткой на блюде с курицей.">
+                <a class="product__link-img" href="#">
+                  <picture class="product__picture">
+                    <source media="(min-width: 768px)" srcset="img/products/chicken-500--tablet.png" width="161" height="172">
+                    <img class="product__img" src="img/products/chicken-500.png"
+                    width="68" height="86"
+                    alt="500 грамм корма в банке с жёлто-оранжевой этикеткой на блюде с курицей.">
+                  </picture>
                 </a>
                 <a class="product__link" href="#">
                   <h3 class="product__title">
@@ -96,10 +99,13 @@
                 </a>
               </li>
               <li class="products__card product">
-                <a class="product__link" href="#">
-                  <img class="product__img" src="img/products/chicken-1000.png"
-                  width="84" height="100"
-                  alt="1000 грамм корма в банке с жёлто-оранжевой этикеткой на блюде с курицей.">
+                <a class="product__link-img" href="#">
+                  <picture class="product__picture">
+                    <source media="(min-width: 768px)" srcset="img/products/chicken-1000--tablet.png" width="168" height="206">
+                    <img  class="product__img" src="img/products/chicken-1000.png"
+                    width="84" height="100"
+                    alt="1000 грамм корма в банке с жёлто-оранжевой этикеткой на блюде с курицей.">
+                  </picture>
                 </a>
                 <a class="product__link" href="#">
                   <h3 class="product__title">
@@ -137,8 +143,8 @@
                 </a>
               </li>
               <li class="products__card product">
-                <a class="product__link" href="#">
-                  <img class="product__img" src="img/products/fish-500.png"
+                <a class="product__link-img" href="#">
+                  <img  class="product__img" src="img/products/fish-500.png"
                   width="68" height="86"
                   alt="500 грамм корма в банке с зелёно-салатовой этикеткой на блюде с рыбой.">
                 </a>
@@ -178,9 +184,9 @@
                 </a>
               </li>
               <li class="products__card product">
-                <a class="product__link" href="#">
-                  <img class="product__img" src="img/products/fish-1000.png"
-                  width="68" height="86"
+                <a class="product__link-img" href="#">
+                  <img  class="product__img" src="img/products/fish-1000.png"
+                  width="84" height="100"
                   alt="1000 грамм корма в банке с зелёно-салатовой этикеткой на блюде с рыбой.">
                 </a>
                 <a class="product__link" href="#">
@@ -219,8 +225,8 @@
                 </a>
               </li>
               <li class="products__card product">
-                <a class="product__link" href="#">
-                  <img class="product__img" src="img/products/buckwheat-500.png"
+                <a class="product__link-img" href="#">
+                  <img  class="product__img" src="img/products/buckwheat-500.png"
                   width="68" height="86"
                   alt="500 грамм корма в банке с сине-голубой этикеткой на блюде с гречкой.">
                 </a>
@@ -260,9 +266,9 @@
                 </a>
               </li>
               <li class="products__card product">
-                <a class="product__link" href="#">
-                  <img class="product__img" src="img/products/buckwheat-1000.png"
-                  width="68" height="86"
+                <a class="product__link-img" href="#">
+                  <img  class="product__img" src="img/products/buckwheat-1000.png"
+                  width="84" height="100"
                   alt="1000 грамм корма в банке с сине-голубой этикеткой на блюде с гречкой.">
                 </a>
                 <a class="product__link" href="#">
@@ -301,8 +307,8 @@
                 </a>
               </li>
               <li class="products__card product">
-                <a class="product__link" href="#">
-                  <img class="product__img" src="img/products/rice-500.png"
+                <a class="product__link-img" href="#">
+                  <img  class="product__img" src="img/products/rice-500.png"
                   width="68" height="86"
                   alt="500 рамм корма в банке с сиренево-фиолетовой этикеткой на блюде с рисом.">
                 </a>
@@ -342,7 +348,7 @@
                 </a>
               </li>
               <li class="products__card product product--more">
-                <a class="product__link" href="#">
+                <a class="product__link product__link--more" href="#">
                   <h3 class="product__title product__title--more">
                     Показать еще 100500 товаров
                   </h3>
@@ -358,76 +364,91 @@
           </section>
         </div>
         <section class="catalog-additional">
-          <div class="container">
+          <div class="wrapper-decor">
             <h2 class="catalog-additional__caption">Дополнительные товары</h2>
-            <div class="catalog-additional__grid">
+          </div>
+          <div class="container">
+            <div class="catalog-additional__flex">
               <ul class="catalog-additional__list">
                 <li class="product-additional">
-                  <h3 class="product-additional__title">
-                    Сахарозаменитель
-                  </h3>
-                  <p class="product-additional__tare">
-                    1 упаковка (100 г)
-                  </p>
-                  <p class="product-additional__price">
-                    200 ₽
+                  <a class="product-additional__link" href="#">
+                    <h3 class="product-additional__title">
+                      Сахарозаменитель
+                    </h3>
+                  </a>
+                  <p class="product-additional__info">
+                    <span class="product-additional__tare">
+                      1 упаковка (100 г)
+                    </span>
+                    <span class="product-additional__price">
+                      200 ₽
+                    </span>
                   </p>
                   <a class="button product-additional__button" href="#">
                     Заказать
                   </a>
                 </li>
                 <li class="product-additional">
-                  <h3 class="product-additional__title">
-                    Питьевая вода
-                  </h3>
-                  <p class="product-additional__tare">
-                    5 литров
-                  </p>
-                  <p class="product-additional__price">
-                    50 ₽
+                  <a class="product-additional__link" href="#">
+                    <h3 class="product-additional__title">
+                      Питьевая вода
+                    </h3>
+                  </a>
+                  <p class="product-additional__info">
+                    <span class="product-additional__tare">
+                      5 литров
+                    </span>
+                    <span class="product-additional__price">
+                      50 ₽
+                    </span>
                   </p>
                   <a class="button product-additional__button" href="#">
                     Заказать
                   </a>
                 </li>
                 <li class="product-additional">
-                  <h3 class="product-additional__title">
-                    Молоко
-                  </h3>
-                  <p class="product-additional__tare">
-                    1 литр
-                  </p>
-                  <p class="product-additional__price">
-                    100 ₽
+                  <a class="product-additional__link" href="#">
+                    <h3 class="product-additional__title">
+                      Молоко
+                    </h3>
+                  </a>
+                  <p class="product-additional__info">
+                    <span class="product-additional__tare">
+                      1 литр
+                    </span>
+                    <span class="product-additional__price">
+                      100 ₽
+                    </span>
                   </p>
                   <a class="button product-additional__button" href="#">
                     Заказать
                   </a>
                 </li>
                 <li class="product-additional">
-                  <h3 class="product-additional__title">
-                    Витамины
-                  </h3>
-                  <p class="product-additional__tare">
-                    1 упаковка (30 г)
-                  </p>
-                  <p class="product-additional__price">
-                    300 ₽
+                  <a class="product-additional__link" href="#">
+                    <h3 class="product-additional__title">
+                      Витамины
+                    </h3>
+                  </a>
+                  <p class="product-additional__info">
+                    <span class="product-additional__tare">
+                      1 упаковка (30 г)
+                    </span>
+                    <span class="product-additional__price">
+                      300 ₽
+                    </span>
                   </p>
                   <a class="button product-additional__button" href="#">
                     Заказать
                   </a>
                 </li>
               </ul>
-              <aside class="catalog-additional__gift gift">
-                <picture class="gift__picture">
-                  <img class="gift__img" src="img/pictures/gift.jpg"
-                  width="280" height="290" aria-hidden="true"
-                  alt="Рюкзак с иллюминатором">
-                </picture>
-                <div class="gift__text">
-                  Закажите все<br>
-                  и получите чехол для кота в подарок!
+              <aside class="catalog-additional__gift">
+                <div class="gift">
+                  <p class="gift__text">
+                    Закажите все<br>
+                    и получите чехол для кота в подарок!
+                  </p>
                 </div>
               </aside>
             </div>
@@ -435,15 +456,17 @@
         </section>
       </main>
       <footer class="main-footer">
-        <div class="main-footer__contacts contacts">
-          <div class="contacts__text container">
-            <p class="contacts__intro">
-              Приглашаем к сотрудничеству дилеров!
-            </p>
-            <p class="contacts__adress">
-              ул. Большая Конюшенная, д. 19/8
-              Санкт-Петербург
-            </p>
+        <div class="contacts">
+          <div class="container">
+            <div class="contacts__text">
+              <p class="contacts__intro">
+                Приглашаем к&nbsp;сотрудничеству дилеров!
+              </p>
+              <address class="contacts__address">
+                ул.&nbsp;Большая Конюшенная,&nbsp;д.&nbsp;19/8
+                <span class="contacts__address-city">Санкт-Петербург</span>
+              </address>
+            </div>
           </div>
           <div class="contacts__map">
             <iframe class="contacts__map-iframe" src="https://yandex.ru/map-widget/v1/?from=mapframe&ll=30.323036%2C59.938631&mode=whatshere&source=mapframe&um=constructor%3Ac5458dd3ee51824c380a253632b8d3a35b8c840df45701f2b4c5b1e36a7abd59&utm_source=share&whatshere%5Bpoint%5D=30.323037%2C59.938631&whatshere%5Bzoom%5D=17&z=16">
@@ -452,14 +475,15 @@
         </div>
         <div class="main-footer__links">
           <div class="container">
-            <div class="main-footer__links-flex">
-              <a class="main-footer__logo logo" href="index.html">
-                <img class="main-footer__logo-img" src="img/logo/logo-text.svg"
-                width="128" height="24" aria-hidden="true"
-                alt="Логотип Кэт энерджи - ссылка на главную.">
-              </a>
-              <section class="social">
-                <h2 class="visually-hidden">Мы в соцсетях</h2>
+            <ul class="main-footer__list">
+              <li class="main-footer__item">
+                <a class="main-footer__logo logo" href="index.html">
+                  <img class="logo__img" src="img/logo/logo-text.svg"
+                  width="128" height="24" aria-hidden="true"
+                  alt="Логотип Кэт энерджи - ссылка на главную.">
+                </a>
+              </li>
+              <li class="main-footer__item social">
                 <ul class="social__list">
                   <li class="social__item">
                     <a class="social__button social__button--vk" href="https://vk.com/htmlacademy" target="_blank" rel="noreferrer noopener">
@@ -483,21 +507,21 @@
                     </a>
                   </li>
                 </ul>
-              </section>
-              <section class="copyright">
-                <h2 class="visually-hidden">Копирайт</h2>
+              </li>
+              <li class="main-footer__item main-footer__item--copyright copyright">
                 <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="noreferrer noopener">
                   HTML Academy
-                  <svg class="copyright__logo"
+                  <!-- <svg class="copyright__logo"
                    width="93" height="27" aria-hidden="true"
                     <use href=""></use>
-                  </svg>
+                  </svg> -->
                 </a>
-              </section>
-            </div>
+              </li>
+            </ul>
           </div>
         </div>
       </footer>
     </div>
+    <script src="js/script.js"></script>
   </body>
 </html>

@@ -18,28 +18,28 @@
               <picture>
                 <source media="(min-width: 1200px)" srcset="img/logo/logo-pic-desktop.svg" width="202" height="59">
                 <source media="(min-width: 768px)" srcset="img/logo/logo-pic-tablet.svg" width="174" height="50">
-                <img class="main-header__logo-img" src="img/logo/logo-pic-mobile.svg"
+                <img class="main-header__logo-img logo__img" src="img/logo/logo-pic-mobile.svg"
                 width="190" height="38" aria-hidden="true"
                 alt="Логотип Кэт энерджи.">
               </picture>
             </a>
-            <nav class="main-nav">
+            <nav class="main-header__nav main-nav">
               <button class="main-nav__toggle toggle" type="button">
                 <span class="visually-hidden">Открыть меню</span>
               </button>
               <ul class="main-nav__list">
                 <li class="main-nav__item main-nav__item--current">
-                  <a class="main-nav__link main-nav__link--current" href="#">
+                  <a class="main-nav__link main-nav__link--current main-nav__link--contrast" href="#">
                     Главная
                   </a>
                 </li>
                 <li class="main-nav__item">
-                  <a class="main-nav__link" href="catalog.html">
+                  <a class="main-nav__link main-nav__link--contrast" href="catalog.html">
                     Каталог продукции
                   </a>
                 </li>
                 <li class="main-nav__item">
-                  <a class="main-nav__link" href="form.html">
+                  <a class="main-nav__link main-nav__link--contrast" href="form.html">
                     Подбор программы
                   </a>
                 </li>
@@ -51,21 +51,25 @@
       <main>
         <section class="hero">
           <div class="container">
-            <h1 class="hero__title">Функциональное<br>
-              питание для котов</h1>
-            <p class="hero__slogan">
-              Занялся собой? Займись котом!
-            </p>
-            <picture class="hero__picture">
-              <source media="(min-width: 1050px)" srcset="img/products/chicken-500--hero-desktop.png" width="552" height="499">
-              <source media="(min-width: 768px)" srcset="img/products/chicken-500--hero-tablet.png" width="709" height="609">
-              <img class="hero__img" src="img/products/chicken-500--hero.png"
-              width="280" height="270"
-              alt="500 грамм корма в банке с жёлто-оранжевой этикеткой на блюде с курицей.">
-            </picture>
-            <a class="hero__button button" href="form.html">
-              Подобрать программу
-            </a>
+            <div class="hero__grid">
+              <div class="hero__content">
+                <h1 class="hero__title">Функциональное<br>
+                  питание для котов</h1>
+                <p class="hero__slogan">
+                  Занялся собой? Займись котом!
+                </p>
+              </div>
+              <picture class="hero__picture">
+                <source media="(min-width: 1440px)" srcset="img/products/chicken-500--hero-desktop.png" width="552" height="499">
+                <source media="(min-width: 768px)" srcset="img/products/chicken-500--hero-tablet.png" width="709" height="609">
+                <img class="hero__img" src="img/products/chicken-500--hero.png"
+                width="280" height="270"
+                alt="500 грамм корма в банке с жёлто-оранжевой этикеткой на блюде с курицей.">
+              </picture>
+              <a class="hero__button button" href="form.html">
+                Подобрать программу
+              </a>
+            </div>
           </div>
         </section>
         <section class="programs">
@@ -73,7 +77,7 @@
             <h2 class="visually-hidden">Программы</h2>
             <ul class="programs__list">
               <li class="programs__item program">
-                <h3 class="program__caption">Похудение</h3>
+                <h3 class="program__caption program__caption--slim">Похудение</h3>
                 <p class="program__text">
                   Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
                   Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
@@ -83,7 +87,7 @@
                 </a>
               </li>
               <li class="programs__item program">
-                <h3 class="program__caption">Набор массы</h3>
+                <h3 class="program__caption program__caption--pro">Набор массы</h3>
                 <p class="program__text">
                   Заработать авторитет среди дворовых котов и даже собак?
                   Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
@@ -100,15 +104,31 @@
             <h3 class="features__title">Как это работает</h3>
             <ol class="features__list">
               <li class="features__item">
+                <!-- <svg class="features__item-img">
+                  width="30" height="32" aria-hidden="true"
+                   <use href=""></use>
+                </svg> -->
                 Функциональное питание содержит только полезные питательные вещества.
               </li>
               <li class="features__item">
+                <!-- <svg class="features__item-img">
+                  width="26" height="29" aria-hidden="true"
+                   <use href=""></use>
+                </svg> -->
                 Выпускается в виде порошка, который нужно лишь залить кипятком и готово. </li>
-              <li class="features__item">
+              <li class="features__item features__item">
+                <!-- <svg class="features__item-img">
+                  width="25" height="30" aria-hidden="true"
+                   <use href=""></use>
+                </svg> -->
                 Замените один-два приема обычной еды на наше функциональное питание.
               </li>
               <li class="features__item">
-                Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
+                <!-- <svg class="features__item-img">
+                  width="26" height="31" aria-hidden="true"
+                   <use href=""></use>
+                </svg> -->
+                Уже через месяц наслаждайтесь изменениями к лучшему вашего&nbsp;питомца!
               </li>
             </ol>
           </div>
@@ -119,87 +139,97 @@
               <h3 class="example__title">Живой пример</h3>
               <p class="example__text">
                 Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
-                Отличный результат без изнуряющих тренировок!
+                Отличный результат без&nbsp;изнуряющих тренировок!
                 При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
               </p>
               <dl class="example__list">
-                <dt class="example__term">
-                  Снижение веса
-                </dt>
-                <dd class="example__definition">
-                  5 кг
-                </dd>
-                <dt class="example__term">
-                  Затрачено времени
-                </dt>
-                <dd class="example__definition">
-                  60 дней
-                </dd>
-                <dt class="example__term example__term--cost">
-                  Затраты на питание:
-                </dt>
-                <dd class="example__definition example__definition--cost">
-                  15 000 руб.
-                </dd>
+                <div class="example__data">
+                  <dt class="example__definition">
+                    5 кг
+                  </dt>
+                  <!-- Ярослав, посмотри, пожалуйста, w3.org ругается:(
+                    но я так поняла что в современных браузерах можно dl и dt с дивами использовать -->
+                  <div class="example__term-wrapper">
+                    <dd class="example__term">
+                      Снижение веса
+                    </dd>
+                  </div>
+                </div>
+                <div class="example__data">
+                  <dt class="example__definition">
+                    60 дней
+                  </dt>
+                  <div class="example__term-wrapper">
+                    <dd class="example__term">
+                      Затрачено времени
+                    </dd>
+                  </div>
+                </div>
+                <div class="example__data example__data--cost">
+                  <dd class="example__term example__term--cost">
+                    Затраты на питание:&nbsp;
+                  </dd>
+                  <dt class="example__definition example__definition--cost">
+                    15 000 руб.
+                  </dt>
+                </div>
               </dl>
               <div class="example__slider slider">
-                <ol class="slider__list">
-                  <li class="slider__slide slider__slide--1">
-                    <img class="slider__slide-img" src="img/pictures/before-mobile.png"
-                    width="280" height="256" aria-hidden="true"
-                    alt="Логотип html-academy.">
-                  </li>
-                  <li class="slider__slide slider__slide--2">
-                    <img class="slider__slide-img" src="img/pictures/after-mobile.png"
-                    width="280" height="256" aria-hidden="true"
-                    alt="Логотип html-academy.">
-                  </li>
-                </ol>
-                <div class="slider__toggles">
-                  <div class="slider__toggles-curtain">
-                  </div>
-                  <button class="slider__toggles-button slider__toggles-button--left">
-                    <span class="visually-hidden">
-                      Влево
-                    </span>
-                  </button>
-                  <button class="slider__toggles-button slider__toggles-button--right">
-                    <span class="visually-hidden">
-                      Вправо
-                    </span>
-                  </button>
-                </div>
+                <picture class="slider__slide slider__slide--before">
+                  <source media="(min-width: 768px)" srcset="img/pictures/slider-cat-before--tablet.png" width="560" height="512">
+                  <img class="slider__img" src="img/pictures/slider-cat-before.png"
+                  width="280" height="256" aria-hidden="true"
+                  alt="Кот-пухляш">
+                </picture>
+                <picture class="slider__slide slider__slide--after">
+                  <source media="(min-width: 768px)" srcset="img/pictures/slider-cat-after--tablet.png" width="560" height="512">
+                  <img class="slider__img" src="img/pictures/slider-cat-after.png"
+                  width="280" height="256" aria-hidden="true"
+                  alt="Кот-худыш">
+                </picture>
+                <button class="slider__toggle">
+                  <span class="visually-hidden">
+                    Потянуть
+                  </span>
+                  <!-- <svg class="slider__toggle-img">
+                  width="40" height="256" aria-hidden="true"
+                   <use href=""></use>
+                  </svg> -->
+                </button>
               </div>
             </div>
           </div>
         </section>
       </main>
       <footer class="main-footer">
-        <div class="main-footer__contacts contacts">
-          <div class="contacts__text contacts__text--main">
-            <p class="contacts__intro">
-              Приглашаем к сотрудничеству дилеров!
-            </p>
-            <p class="contacts__adress">
-              ул. Большая Конюшенная, д. 19/8
-              Санкт-Петербург
-            </p>
+        <div class="contacts contacts--main">
+          <div class="container">
+            <div class="contacts__text">
+              <p class="contacts__intro">
+                Приглашаем к&nbsp;сотрудничеству дилеров!
+              </p>
+              <address class="contacts__address">
+                ул.&nbsp;Большая Конюшенная,&nbsp;д.&nbsp;19/8
+                <span class="contacts__address-city">Санкт-Петербург</span>
+              </address>
+            </div>
           </div>
           <div class="contacts__map">
-            <iframe class="contacts__map-iframe" src="https://yandex.ru/map-widget/v1/?from=mapframe&ll=30.323036%2C59.938631&mode=whatshere&source=mapframe&um=constructor%3Ac5458dd3ee51824c380a253632b8d3a35b8c840df45701f2b4c5b1e36a7abd59&utm_source=share&whatshere%5Bpoint%5D=30.323037%2C59.938631&whatshere%5Bzoom%5D=17&z=16">
+            <iframe class="contacts__map-iframe" src="https://yandex.ru/map-widget/v1/?ll=30.323037%2C59.938631&mode=whatshere&whatshere%5Bpoint%5D=30.323037%2C59.938631&whatshere%5Bzoom%5D=17&z=16">
             </iframe>
           </div>
         </div>
         <div class="main-footer__links">
           <div class="container">
-            <div class="main-footer__links-flex">
-              <a class="main-footer__logo logo logo--disabled" href="#" aria-current="page">
-                <img class="main-footer__logo-img" src="img/logo/logo-text.svg"
-                width="128" height="24" aria-hidden="true"
-                alt="Логотип Кэт энерджи.">
-              </a>
-              <section class="social">
-                <h2 class="visually-hidden">Мы в соцсетях</h2>
+            <ul class="main-footer__list">
+              <li class="main-footer__item">
+                <a class="main-footer__logo logo logo--disabled" href="#" aria-current="page">
+                  <img class="logo__img" src="img/logo/logo-text.svg"
+                  width="128" height="24" aria-hidden="true"
+                  alt="Логотип Кэт энерджи.">
+                </a>
+              </li>
+              <li class="main-footer__item social">
                 <ul class="social__list">
                   <li class="social__item">
                     <a class="social__button social__button--vk" href="https://vk.com/htmlacademy" target="_blank" rel="noreferrer noopener">
@@ -223,9 +253,8 @@
                     </a>
                   </li>
                 </ul>
-              </section>
-              <section class="copyright">
-                <h2 class="visually-hidden">Копирайт</h2>
+              </li>
+              <li class="main-footer__item main-footer__item--copyright copyright">
                 <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="noreferrer noopener">
                   HTML Academy
                   <svg class="copyright__logo"
@@ -233,11 +262,12 @@
                     <use href=""></use>
                   </svg>
                 </a>
-              </section>
-            </div>
+              </li>
+            </ul>
           </div>
         </div>
       </footer>
     </div>
+    <script src="js/script.js"></script>
   </body>
 </html>

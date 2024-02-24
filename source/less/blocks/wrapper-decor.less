@@ -1,0 +1,10 @@
+.wrapper-decor {
+  position: relative;
+
+  &::after {
+    .before-after(100%; 2px);
+    .position-absolute(22px);
+    z-index: -1;
+    background-color: @basic-brigth;
+  }
+}

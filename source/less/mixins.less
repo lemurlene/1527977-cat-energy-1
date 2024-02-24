@@ -56,27 +56,29 @@
 }
 
 .padding-horizontal--base() {
-  padding-right: 20px;
   padding-left: 20px;
+  padding-right: 20px;
 
   @media (min-width: @tablet-width) {
-    padding-right: 30px;
     padding-left: 30px;
+    padding-right: 30px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-right: 110px;
     padding-left: 110px;
+    padding-right: 110px;
   }
 }
 
 .before-after(@width; @height) {
   width: @width;
   height: @height;
+  display: block;
+  content: "";
 }
 
 .position-absolute(@top) {
   position: absolute;
   top: @top;
+  display: flex;
 }
-

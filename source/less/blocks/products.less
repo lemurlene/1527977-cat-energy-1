@@ -1,11 +1,27 @@
 .products__card {
   width: 280px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     width: 324px;
+    margin-top: 80px;
   }
 
   @media (min-width: @desktop-width) {
     width: 245px;
+  }
+}
+
+@media (max-width: (@tablet-width - 1)) {
+  .products__card::before,
+  products__card:last-of-type::after {
+    .before-after(100vw; 1px);
+    .position-absolute(0);
+    background-color: @basic-background-350;
+    left: -20px;
+  }
+
+  products__card:last-of-type::after {
+    top: 200px;
   }
 }

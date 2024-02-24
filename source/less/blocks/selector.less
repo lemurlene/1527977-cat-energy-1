@@ -1,3 +1,92 @@
 .selector {
-  font-size: 16px;
+  .padding-vertical(6px; 6px);
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    .padding-vertical(10px; 10px);
+  }
+
 }
+
+.selector__label {
+  display: block;
+  padding-left: 45px;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 60px;
+  }
+}
+
+.selector__input {
+  .position-absolute(0);
+  .layout(center; center);
+  display: flex;
+  width: 30px;
+  height: 30px;
+  margin: 2px 0;
+  appearance: none;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+
+  &::before {
+    .before-after(30px; 30px);
+    flex-shrink: 0;
+    border: 1px solid @special-300;
+
+    @media (min-width: @tablet-width) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &:disabled::before {
+    cursor: not-allowed;
+  }
+}
+
+.selector__input--radio {
+
+  &::before {
+    border-radius: 50%;
+  }
+
+  &:checked::after {
+    .before-after(12px; 12px);
+    .position-absolute(auto);
+    flex-shrink: 0;
+    background-color: @basic-brigth;
+    border: 1px solid @basic-brigth;
+    border-radius: 50%;
+
+    @media (min-width: @tablet-width) {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  &:disabled::before {
+    opacity: 0.4;
+  }
+}
+
+.selector__input--checkbox {
+
+  &:checked::after {
+    .before-after(26px; 26px);
+    .position-absolute(auto);
+    background-image: url("../img/icon-background/checkbox-checked.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &:disabled::before {
+    opacity: 0.5;
+  }
+}
+
+

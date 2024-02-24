@@ -2,6 +2,7 @@
   .flex();
   .layout(center; center);
   .padding-vertical(10px; 10px);
+  .padding-horizontal(26px; 26px);
   .Oswald();
   .typography(16px; 20px);
   .uppercase();
@@ -10,4 +11,9 @@
   color: @white;
   background-color: @basic-brigth;
   border: none;
+
+  @media (min-width: @tablet-width) {
+    .padding-vertical(14px; 14px);
+    .typography(20px; 26px);
+  }
 }
