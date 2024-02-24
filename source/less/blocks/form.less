@@ -15,12 +15,6 @@
   }
 }
 
-.form__fieldset--decor-comit {
-  &::before {
-  top: -55px;
-  }
-}
-
 .form__legend {
   .typography(24px; 26px);
   .padding-horizontal(20px; 20px);
@@ -70,8 +64,7 @@
    }
 }
 
-.form__input,
-.form__input::placeholder {
+.form__input {
   .padding-vertical(10px; 10px);
   .padding-horizontal(15px; 14px);
   .Oswald();
@@ -84,6 +77,10 @@
   @media (min-width: @tablet-width) {
     .typography(20px; 20px);
     .padding-horizontal(20px; 20px);
+  }
+
+  &::placeholder {
+    color: @special-dark-200;
   }
 }
 
