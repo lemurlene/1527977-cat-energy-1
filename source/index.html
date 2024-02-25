@@ -8,6 +8,10 @@
     <link rel="preload" href="fonts/Oswald-Regular.woff2" as="font">
     <link rel="preload" href="fonts/Oswald-Medium.woff2" as="font">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple.png">
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body class="page-body">
     <div class="page-body__wrapper">
@@ -60,9 +64,9 @@
                 </p>
               </div>
               <picture class="hero__picture">
-                <source media="(min-width: 1440px)" srcset="img/products/chicken-500--hero-desktop.png" width="552" height="499">
-                <source media="(min-width: 768px)" srcset="img/products/chicken-500--hero-tablet.png" width="709" height="609">
-                <img class="hero__img" src="img/products/chicken-500--hero.png"
+                <source media="(min-width: 1440px)" srcset="img/products/chicken-500--hero-desktop.png 1x, img/products/chicken-500--hero-desktop@2x.png 2x" width="552" height="499">
+                <source media="(min-width: 768px)" srcset="img/products/chicken-500--hero-tablet.png 1x, img/products/chicken-500--hero-tablet@2x.png 2x" width="709" height="609">
+                <img class="hero__img" src="img/products/chicken-500--hero.png" srcset="img/chicken-500--hero@2x.png 2x"
                 width="280" height="270"
                 alt="500 грамм корма в банке с жёлто-оранжевой этикеткой на блюде с курицей.">
               </picture>
@@ -147,8 +151,8 @@
                   <dt class="example__definition">
                     5 кг
                   </dt>
-                  <!-- Ярослав, посмотри, пожалуйста, w3.org ругается:(
-                    но я так поняла что в современных браузерах можно dl и dt с дивами использовать -->
+              <!-- Ярослав, посмотри, пожалуйста, w3.org ругается:(
+              но я так поняла что в современных браузерах можно dl и dt с дивами использовать -->
                   <div class="example__term-wrapper">
                     <dd class="example__term">
                       Снижение веса
@@ -176,14 +180,14 @@
               </dl>
               <div class="example__slider slider">
                 <picture class="slider__slide slider__slide--before">
-                  <source media="(min-width: 768px)" srcset="img/pictures/slider-cat-before--tablet.png" width="560" height="512">
-                  <img class="slider__img" src="img/pictures/slider-cat-before.png"
+                  <source media="(min-width: 768px)" srcset="img/pictures/slider-cat-before--tablet.png 1x, img/pictures/slider-cat-before--tablet@2x.png 2x" width="560" height="512">
+                  <img class="slider__img" src="img/pictures/slider-cat-before.png" srcset="img/pictures/slider-cat-before@2x.png 2x"
                   width="280" height="256" aria-hidden="true"
                   alt="Кот-пухляш">
                 </picture>
                 <picture class="slider__slide slider__slide--after">
-                  <source media="(min-width: 768px)" srcset="img/pictures/slider-cat-after--tablet.png" width="560" height="512">
-                  <img class="slider__img" src="img/pictures/slider-cat-after.png"
+                  <source media="(min-width: 768px)" srcset="img/pictures/slider-cat-after--tablet.png 1x, img/pictures/slider-cat-after--tablet@2x.png 2x" width="560" height="512">
+                  <img class="slider__img" src="img/pictures/slider-cat-after.png" srcset="img/pictures/slider-cat-after@2x.png 2x"
                   width="280" height="256" aria-hidden="true"
                   alt="Кот-худыш">
                 </picture>

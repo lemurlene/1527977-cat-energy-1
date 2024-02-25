@@ -10,6 +10,11 @@
   box-shadow: 0 -178px 0 0 @white inset;
   background-size: contain;
 
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient(rgba(@basic-brigth, 0.85), rgba(@basic-brigth, 0.85)),
+    url("../img/background/hero@2x.png");
+  }
+
   @media (min-width: @tablet-width) {
     .padding-vertical(40px; 0);
     background-image: none;
@@ -32,11 +37,15 @@
       min-height: 694px;
       right: 0;
       left: inherit;
-      background-image: url("../img/background/hero-desktop.jpg");
+      background-image: url("../img/background/hero--desktop.jpg");
       background-repeat: no-repeat;
       background-position: right;
       background-color: @brigth-darker;
       z-index: -2;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/background/hero@2x--desktop.jpg");
+      }
     }
   }
 }
