@@ -1,6 +1,27 @@
 .program {
+  position: relative;
   background-color: @basic-background-100;
 }
+
+.program__pic {
+  .position-absolute(auto);
+  .layout(center; center);
+  display: flex;
+  width: 90px;
+  height: 96px;
+}
+
+ .program__container {
+  .padding-horizontal(20px; 20px);
+
+  @media (min-width: @tablet-width) {
+    .padding-horizontal(52px; 316px);
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 62px;
+  }
+ }
 
 .program__caption {
   .heading-reset();
@@ -8,7 +29,6 @@
   .Oswald();
   .typography(24px; 37px);
   .uppercase();
-  position: relative;
   display: flex;
   align-items: center;
   column-gap: 20px;
@@ -42,42 +62,20 @@
     }
   }
 
-  &::after {
-    .before-after(67px; 53px);
-    .position-absolute(20px);
-    left: -9px;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
+  // &::after {
+  //   @media (min-width: @tablet-width) {
+  //     top: 150px;
+  //     left: auto;
+  //     right: -188px;
+  //     transform: scale(4);
+  //   }
 
-    @media (min-width: @tablet-width) {
-      top: 150px;
-      left: auto;
-      right: -188px;
-      transform: scale(4);
-    }
-
-    @media (min-width: @desktop-width) {
-      transform: scale(2);
-      top: 60px;
-      left: 18px;
-    }
-  }
-}
-
-.program__caption--slim::after {
-  background-image: url("../img/icon-background/cat-slim.svg");
-}
-
-.program__caption--pro::after {
-  background-image: url("../img/icon-background/cat-pro.svg");
-
-  @media (min-width: @tablet-width) {
-    top: 165px;
-  }
-
-  @media (min-width: @desktop-width) {
-    top: 65px;
-  }
+  //   @media (min-width: @desktop-width) {
+  //     transform: scale(2);
+  //     top: 60px;
+  //     left: 18px;
+  //   }
+  // }
 }
 
 .program__text {
@@ -114,6 +112,6 @@
 
   &::after {
     .before-after(32px; 10px);
-    background-image: url("../img/icon-background/arrow.svg");
+    background-image: url("../img/sprite.svg#arrow");
   }
 }

@@ -5,8 +5,18 @@
 }
 
 .social__button {
+  .layout(center; center);
   .padding-vertical(20px; 20px);
+  display: flex;
+  width: 28px;
   color: @special-600;
+
+  &:hover,
+  &:focus {
+    color: @basic-brigth;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
-
-
