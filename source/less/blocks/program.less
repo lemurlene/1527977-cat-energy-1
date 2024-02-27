@@ -9,6 +9,13 @@
   display: flex;
   width: 90px;
   height: 96px;
+
+  @media (min-width: @tablet-width) {
+    top: 130px;
+    right: 120px;
+    z-index: 2;
+    transform: scale(4);
+  }
 }
 
  .program__container {
@@ -37,6 +44,7 @@
   @media (min-width: @tablet-width) {
     .padding-vertical(77px; 24px);
     .typography(36px; 36px);
+    position: relative;
   }
 
   @media (min-width: @desktop-width) {
