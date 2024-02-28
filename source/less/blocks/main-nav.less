@@ -57,6 +57,11 @@
     gap: 33px;
     margin-right: 4px;
   }
+
+  @media (min-width: @desktop-width) {
+    gap: 33px;
+    margin-right: 0;
+  }
 }
 
 .main-nav__item {
@@ -107,6 +112,10 @@
       .before-after(100%; 2px);
       bottom: 12px;
       background-color: @basic-brigth;
+    }
+
+    @media (min-width: @desktop-width) {
+      bottom: 16px;
     }
   }
 }
