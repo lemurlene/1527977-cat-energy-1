@@ -23,7 +23,7 @@
 
   .main-nav__toggle--js {
     .position-absolute(20px);
-    right: 20px;
+    right: 15px;
     width: 24px;
     height: 24px;
     background-image: url("../img/sprite.svg#cross");
@@ -44,7 +44,8 @@
   }
 
   .main-nav--closed .main-nav__toggle {
-      background-image: url("../img/sprite.svg#menu");
+    right: 20px;
+    background-image: url("../img/sprite.svg#menu");
   }
 }
 
@@ -68,7 +69,6 @@
   @media (max-width: (@tablet-width - 1)) {
     width: 100%;
     text-align: center;
-    border-bottom: 1px solid @basic-background-300;
   }
 
   &:hover {
@@ -88,10 +88,22 @@
   .Oswald();
   .typography(20px; 20px);
   .uppercase();
-  .padding-vertical(22px; 23px);
+  .padding-vertical(23px; 23px);
   .padding-horizontal--base();
   display: block;
   color: @black;
+
+  @media (max-width: (@tablet-width - 1)) {
+    position: relative;
+
+    &::after {
+      .position-absolute(66px);
+      .before-after(auto; 1px);
+      left: -20px;
+      right: -20px;
+      background-color: @basic-background-300;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     .padding-horizontal(0; 0);
