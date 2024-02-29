@@ -70,14 +70,6 @@
     width: 100%;
     text-align: center;
   }
-
-  &:hover {
-    opacity: 0.6;
-  }
-
-  &:focus {
-    opacity: 0.3;
-  }
 }
 
 .main-nav__item--current {
@@ -113,6 +105,15 @@
   @media (min-width: @desktop-width) {
     .typography(20px; 26px);
   }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .main-nav__link--current {
@@ -122,12 +123,8 @@
     @media (min-width: @tablet-width) {
       .position-absolute(auto);
       .before-after(100%; 2px);
-      bottom: 12px;
-      background-color: @basic-brigth;
-    }
-
-    @media (min-width: @desktop-width) {
       bottom: 16px;
+      background-color: @basic-brigth;
     }
   }
 }

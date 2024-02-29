@@ -117,4 +117,13 @@
     .before-after(32px; 10px);
     background-image: url("../img/sprite.svg#arrow");
   }
+
+  &:hover::after,
+  &:focus::after {
+    background-image: url("../img/sprite.svg#arrow-hover");
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
