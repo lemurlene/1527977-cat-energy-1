@@ -103,66 +103,70 @@
               </label>
             </fieldset>
           </div>
-          <fieldset class="form__fieldset form__fieldset--decor program-form__fieldset program-form__fieldset--contact">
-            <legend class="form__legend form__legend--contact">
-              Контактные&nbsp;данные (владельца кота):
-            </legend>
-            <div class="form-main__container form-main__container--desktop-grid">
-              <label class="form__label form__label--contact field">
-                E-mail:*
-                <input class="form__input form__input--text" type="email" name="owner-email" placeholder="kuklachev@gmail.com">
-                <!-- <svg class="form__label--contact-img"
-                width="20" height="20" aria-hidden="true"
-                 <use href=""></use>
-                </svg> -->
-              </label>
-              <label class="form__label form__label--contact field">
-                Телефон:*
-                <input class="form__input form__input--text" type="tel" name="owner-tel" placeholder="8 (960) 900-60-90">
-                <!-- <svg class="form__label--contact-img"
-                width="20" height="20" aria-hidden="true"
-                 <use href=""></use>
-                </svg> -->
-              </label>
+          <fieldset class="form__fieldset program-form__fieldset program-form__fieldset--contact">
+            <div class="form-main__container">
+              <legend class="form__legend form__legend--contact">
+                Контактные&nbsp;данные (владельца кота):
+              </legend>
+              <div class="program-form__contact-grid">
+                <label class="form__label form__label--email field">
+                  E-mail:*
+                  <input class="form__input form__input--text" type="email" name="owner-email" placeholder="kuklachev@gmail.com">
+                  <!-- <svg class="form__label--contact-img"
+                  width="20" height="20" aria-hidden="true"
+                   <use href=""></use>
+                  </svg> -->
+                </label>
+                <label class="form__label form__label--phone field">
+                  Телефон:*
+                  <input class="form__input form__input--text" type="tel" name="owner-tel" placeholder="8 (960) 900-60-90">
+                  <!-- <svg class="form__label--contact-img"
+                  width="20" height="20" aria-hidden="true"
+                   <use href=""></use>
+                  </svg> -->
+                </label>
+              </div>
             </div>
           </fieldset>
-          <fieldset class="form__fieldset form__fieldset--decor program-form__fieldset">
-            <legend class="form__legend">
-              Комментарий:
-            </legend>
+          <fieldset class="form__fieldset program-form__fieldset program-form__fieldset--comment">
             <div class="form-main__container">
+              <legend class="form__legend">
+                Комментарий:
+              </legend>
               <textarea class="form__input form__input--textarea" name="comit" placeholder="Расскажите обо всех повадках кота"></textarea>
             </div>
           </fieldset>
-          <fieldset class="form__fieldset form__fieldset--decor program-form__fieldset">
-            <legend class="form__legend form__legend--additionally">
-              Дополнительно
-            </legend>
-            <div class="form-main__container program-form__fieldset program-form__fieldset--additionally">
-              <label class="form__label selector">
-                <input class="selector__input selector__input--checkbox" type="checkbox" id="sweetener" name="sweetener" checked>
-                <span class="selector__label">
-                Cахарозаменитель
-                </span>
-              </label>
-              <label class="form__label selector">
-                <input class="selector__input selector__input--checkbox" type="checkbox" id="water" name="water">
-                <span class="selector__label">
-                Питьевая вода
-                </span>
-              </label>
-              <label class="form__label selector">
-                <input class="selector__input selector__input--checkbox" type="checkbox" id="milk" name="milk">
-                <span class="selector__label">
-                Молоко
-                </span>
-              </label>
-              <label class="form__label selector">
-                <input class="selector__input selector__input--checkbox" type="checkbox" id="vitamins" name="vitamins">
-                <span class="selector__label">
-                Витамины
-                </span>
-              </label>
+          <fieldset class="form__fieldset program-form__fieldset program-form__fieldset--additionally">
+            <div class="form-main__container">
+              <legend class="form__legend form__legend--additionally">
+                Дополнительно
+              </legend>
+              <div class="program-form__additionally-grid">
+                <label class="form__label selector">
+                  <input class="selector__input selector__input--checkbox" type="checkbox" id="sweetener" name="sweetener" checked>
+                  <span class="selector__label">
+                  Cахарозаменитель
+                  </span>
+                </label>
+                <label class="form__label selector">
+                  <input class="selector__input selector__input--checkbox" type="checkbox" id="water" name="water">
+                  <span class="selector__label">
+                  Питьевая вода
+                  </span>
+                </label>
+                <label class="form__label selector">
+                  <input class="selector__input selector__input--checkbox" type="checkbox" id="milk" name="milk">
+                  <span class="selector__label">
+                  Молоко
+                  </span>
+                </label>
+                <label class="form__label selector">
+                  <input class="selector__input selector__input--checkbox" type="checkbox" id="vitamins" name="vitamins">
+                  <span class="selector__label">
+                  Витамины
+                  </span>
+                </label>
+              </div>
             </div>
           </fieldset>
           <div class="form-main__container form-main__container--footer">
@@ -204,24 +208,33 @@
               <li class="main-footer__item social">
                 <ul class="social__list">
                   <li class="social__item">
-                    <a class="social__button social__button--vk" href="https://vk.com/htmlacademy" target="_blank" rel="noreferrer noopener">
-                      <!-- <span class="visually-hidden"> -->
+                    <a class="social__button" href="https://vk.com/htmlacademy" target="_blank" rel="noreferrer noopener">
+                      <span class="visually-hidden">
                         Вконтакте
-                      <!-- </span> -->
+                      </span>
+                      <svg class="social__button-img" width="27" height="17" aria-hidden="true">
+                        <use href="img/sprite.svg#vk"></use>
+                       </svg>
                     </a>
                   </li>
                   <li class="social__item">
-                    <a class="social__button social__button--youtube" href="https://www.youtube.com/user/htmlacademyru" target="_blank" rel="noreferrer noopener">
-                      <!-- <span class="visually-hidden"> -->
+                    <a class="social__button" href="https://www.youtube.com/user/htmlacademyru" target="_blank" rel="noreferrer noopener">
+                      <span class="visually-hidden">
                         Ютуб
-                      <!-- </span> -->
+                      </span>
+                      <svg class="social__button-img" width="24" height="19" aria-hidden="true">
+                        <use href="img/sprite.svg#youTube"></use>
+                       </svg>
                     </a>
                   </li>
                   <li class="social__item">
-                    <a class="social__button social__button--telegram" href="https://t.me/htmlacademy" target="_blank" rel="noreferrer noopener">
-                      <!-- <span class="visually-hidden"> -->
+                    <a class="social__button" href="https://t.me/htmlacademy" target="_blank" rel="noreferrer noopener">
+                      <span class="visually-hidden">
                         Телеграмм
-                      <!-- </span> -->
+                      </span>
+                      <svg class="social__button-img" width="20" height="17" aria-hidden="true">
+                        <use href="img/sprite.svg#telegram"></use>
+                       </svg>
                     </a>
                   </li>
                 </ul>
@@ -229,10 +242,6 @@
               <li class="main-footer__item main-footer__item--copyright copyright">
                 <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="noreferrer noopener">
                   HTML Academy
-                  <!-- <svg class="copyright__logo"
-                   width="93" height="27" aria-hidden="true"
-                    <use href=""></use>
-                  </svg> -->
                 </a>
               </li>
             </ul>
