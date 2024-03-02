@@ -95,7 +95,7 @@
                   Набор массы
                 </span>
               </label>
-              <label class="form__label selector">
+              <label class="form__label selector" disabled>
                 <input class="selector__input selector__input--radio" type="radio" name="program" value="advice">
                 <span class="selector__label">
                   Не знаю (Нужен ваш совет)
@@ -109,21 +109,19 @@
                 Контактные&nbsp;данные (владельца кота):
               </legend>
               <div class="program-form__contact-grid">
-                <label class="form__label form__label--email field">
+                <label class="form__label field">
                   E-mail:*
                   <input class="form__input form__input--text" type="email" name="owner-email" placeholder="kuklachev@gmail.com">
-                  <!-- <svg class="form__label--contact-img"
-                  width="20" height="20" aria-hidden="true"
-                   <use href=""></use>
-                  </svg> -->
+                  <svg class="form__input-img" width="20" height="20" aria-hidden="true">
+                    <use href="img/sprite.svg#email"></use>
+                   </svg>
                 </label>
-                <label class="form__label form__label--phone field">
+                <label class="form__label field">
                   Телефон:*
                   <input class="form__input form__input--text" type="tel" name="owner-tel" placeholder="8 (960) 900-60-90">
-                  <!-- <svg class="form__label--contact-img"
-                  width="20" height="20" aria-hidden="true"
-                   <use href=""></use>
-                  </svg> -->
+                  <svg class="form__input-img" width="16" height="16" aria-hidden="true">
+                    <use href="img/sprite.svg#phone"></use>
+                   </svg>
                 </label>
               </div>
             </div>
@@ -172,7 +170,7 @@
           <div class="form-main__container form-main__container--footer">
             <button class="button form__button" type="submit">Отправить заявку</button>
             <p class="program-form__note">
-              * — Обязательные поля
+              * &ndash; Обязательные поля
             </p>
           </div>
         </form>

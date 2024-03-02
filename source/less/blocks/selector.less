@@ -43,6 +43,10 @@
     }
   }
 
+  &:hover::before {
+    border-color: @selector-hover;
+  }
+
   &:disabled::before {
     cursor: not-allowed;
   }
@@ -77,10 +81,17 @@
 
   &:checked::after {
     .before-after(26px; 26px);
-    .position-absolute(auto);
-    background-image: url("../img/icon-background/checkbox-checked.svg");
+    .position-absolute(8px);
+    left: 5px;
+    background-image: url("../img/sprite.svg#checkbox-checked");
     background-position: center;
     background-repeat: no-repeat;
+
+    @media (min-width: @tablet-width) {
+      top: 15px;
+      left: 12px;
+      transform: scale(1.3);
+    }
   }
 
   &:disabled::before {

@@ -18,7 +18,7 @@
     .typography(36px; 36px);
     .padding-horizontal(40px; 40px);
     white-space: nowrap;
-    margin-left: 30px;
+    margin-left: -40px;
    }
 
    @media (min-width: @desktop-width) {
@@ -33,27 +33,20 @@
 }
 
 .form__legend--additionally {
-  margin-bottom: 32px;
+  margin-bottom: 31px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 57px;
+    margin-bottom: 55px;
    }
 }
 
 .form__label {
   white-space: nowrap;
-}
+  position: relative;
 
-.form__label--email::after,
-.form__label--phone::after {
-  .before-after(20px; 20px);
-  background-repeat: no-repeat;
-  background-position: center;
-  stroke: @black;
-}
-
-.form__label--email::after {
-  mask-image: url("../img/sprite.svg#email");
+  &:disabled {
+    opacity: 0.3;
+  }
 }
 
 .form__input {
@@ -64,7 +57,8 @@
   color: @special-dark-200;
   text-transform: inherit;
   cursor: pointer;
-  border: 1px solid @special-400;
+  border: none;
+  outline: 1px solid @special-400;
 
   @media (min-width: @tablet-width) {
     .typography(20px; 20px);
@@ -74,21 +68,55 @@
   &::placeholder {
     color: @special-dark-200;
   }
+
+  &:hover {
+    outline-color: @special-300;
+  }
+
+  &:focus {
+    outline-color: @special-dark-200;
+    outline-width: 2px;
+  }
+
+  &:invalid {
+    outline-color: @status-error;
+    outline-width: 2px;
+  }
 }
 
 .form__input--text {
   width: 100%;
 }
 
+.form__input-img {
+  .position-absolute(14px);
+  right: 12px;
+  color: @black;
+
+  @media (min-width: @tablet-width) {
+    top: 15px;
+    right: 14px;
+  }
+}
+
+.form__input:focus + .form__input-img {
+  color: @basic-brigth;
+}
+
+.form__input:invalid + .form__input-img {
+  color:@status-error;
+}
+
 .form__input--textarea {
   resize: vertical;
   width: 100%;
-  min-height: 150px;
+  min-height: 148px;
+  margin-top: 5px;
   padding-top: 14px;
 
   @media (min-width: @tablet-width) {
-    margin-top: 53px;
-    min-height: 175px;
+    margin-top: 56px;
+    min-height: 172px;
   }
 }
 
