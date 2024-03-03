@@ -6,11 +6,12 @@
 }
 
 .main-header__flex {
-  .flex();
+  display: flex;
   flex-direction: column;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
+    column-gap: 33px;
     align-items: center;
   }
 }

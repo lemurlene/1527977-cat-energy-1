@@ -40,6 +40,13 @@
   }
 }
 
+.form-main__container--desktop-grid {
+  @media (min-width: @desktop-width) {
+    .grid(1fr 1fr);
+    column-gap: 80px;
+  }
+}
+
 .form-main__title {
   .heading-reset();
   .typography(36px; 36px);
@@ -53,6 +60,10 @@
     margin-top: 35px;
     margin-bottom: 54px;
   }
+
+  @media (min-width: @tablet-width) {
+    margin-top: 30px;
+  }
 }
 
 .form-main__intro {
@@ -65,5 +76,9 @@
     .typography(20px; 30px);
     margin-top: 35px;
     margin-bottom: 45px;
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 66px;
+    }
   }
 }

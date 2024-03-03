@@ -5,6 +5,7 @@
   text-align: center;
   background-image: linear-gradient(rgba(@basic-brigth, 0.85), rgba(@basic-brigth, 0.85)),
     url("../img/background/hero.png");
+  background-color: @brigth-darker;
   background-repeat: no-repeat;
   background-position: center top;
   box-shadow: 0 -178px 0 0 @white inset;
@@ -18,6 +19,7 @@
   @media (min-width: @tablet-width) {
     .padding-vertical(40px; 0);
     background-image: none;
+    background-color: transparent;
     color: @black;
     text-align: left;
     box-shadow: none;
@@ -57,12 +59,14 @@
 }
 
 .hero__content {
+
   @media (min-width: @tablet-width) {
     .padding-horizontal(90px; 90px);
   }
 
   @media (min-width: @desktop-width) {
     .padding-horizontal(80px; 80px);
+    max-width: 65%;
   }
 }
 

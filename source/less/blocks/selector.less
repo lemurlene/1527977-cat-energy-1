@@ -32,6 +32,10 @@
     height: 40px;
   }
 
+  &:focus {
+    outline: transparent;
+  }
+
   &::before {
     .before-after(30px; 30px);
     flex-shrink: 0;
@@ -43,8 +47,10 @@
     }
   }
 
-  &:hover::before {
+  &:hover::before,
+  &:focus::before {
     border-color: @selector-hover;
+    outline: transparent;
   }
 
   &:disabled::before {

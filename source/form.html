@@ -23,7 +23,7 @@
                 <source media="(min-width: 1200px)" srcset="img/logo/logo-pic-desktop.svg" width="202" height="59">
                 <source media="(min-width: 768px)" srcset="img/logo/logo-pic-tablet.svg" width="174" height="50">
                 <img class="main-header__logo-img" src="img/logo/logo-pic-mobile.svg"
-                width="190" height="38" aria-hidden="true"
+                width="190" height="38"
                 alt="Логотип Кэт энерджи - ссылка на главную.">
               </picture>
             </a>
@@ -68,11 +68,11 @@
               </legend>
               <label class="form__label field">
                 Имя:*
-                <input class="form__input form__input--text" type="text" name="cat-name" placeholder="Барсик">
+                <input class="form__input form__input--text" type="text" name="cat-name" placeholder="Барсик" required>
               </label>
               <label class="form__label field">
                 Вес (кг):*
-                <input class="form__input form__input--text" type="text" name="cat-weight" placeholder="7">
+                <input class="form__input form__input--text" type="text" name="cat-weight" placeholder="7" required>
               </label>
               <label class="form__label field">
                 Возраст (лет):
@@ -95,7 +95,7 @@
                   Набор массы
                 </span>
               </label>
-              <label class="form__label selector" disabled>
+              <label class="form__label selector">
                 <input class="selector__input selector__input--radio" type="radio" name="program" value="advice">
                 <span class="selector__label">
                   Не знаю (Нужен ваш совет)
@@ -103,42 +103,42 @@
               </label>
             </fieldset>
           </div>
-          <fieldset class="form__fieldset program-form__fieldset program-form__fieldset--contact">
+          <div class="form__fieldset program-form__fieldset program-form__fieldset--contact">
             <div class="form-main__container">
-              <legend class="form__legend form__legend--contact">
+              <h2 class="form__legend form__legend--contact">
                 Контактные&nbsp;данные (владельца кота):
-              </legend>
+              </h2>
               <div class="program-form__contact-grid">
                 <label class="form__label field">
                   E-mail:*
-                  <input class="form__input form__input--text" type="email" name="owner-email" placeholder="kuklachev@gmail.com">
+                  <input class="form__input form__input--text" type="email" name="owner-email" placeholder="kuklachev@gmail.com" required>
                   <svg class="form__input-img" width="20" height="20" aria-hidden="true">
                     <use href="img/sprite.svg#email"></use>
                    </svg>
                 </label>
                 <label class="form__label field">
                   Телефон:*
-                  <input class="form__input form__input--text" type="tel" name="owner-tel" placeholder="8 (960) 900-60-90">
+                  <input class="form__input form__input--text" type="tel" name="owner-tel" placeholder="8 (960) 900-60-90" required>
                   <svg class="form__input-img" width="16" height="16" aria-hidden="true">
                     <use href="img/sprite.svg#phone"></use>
                    </svg>
                 </label>
               </div>
             </div>
-          </fieldset>
-          <fieldset class="form__fieldset program-form__fieldset program-form__fieldset--comment">
+          </div>
+          <div class="form__fieldset program-form__fieldset program-form__fieldset--comment">
             <div class="form-main__container">
-              <legend class="form__legend">
+              <h2 class="form__legend">
                 Комментарий:
-              </legend>
+              </h2>
               <textarea class="form__input form__input--textarea" name="comit" placeholder="Расскажите обо всех повадках кота"></textarea>
             </div>
-          </fieldset>
-          <fieldset class="form__fieldset program-form__fieldset program-form__fieldset--additionally">
+          </div>
+          <div class="form__fieldset program-form__fieldset program-form__fieldset--additionally">
             <div class="form-main__container">
-              <legend class="form__legend form__legend--additionally">
+              <h2 class="form__legend form__legend--additionally">
                 Дополнительно
-              </legend>
+              </h2>
               <div class="program-form__additionally-grid">
                 <label class="form__label selector">
                   <input class="selector__input selector__input--checkbox" type="checkbox" id="sweetener" name="sweetener" checked>
@@ -166,7 +166,7 @@
                 </label>
               </div>
             </div>
-          </fieldset>
+          </div>
           <div class="form-main__container form-main__container--footer">
             <button class="button form__button" type="submit">Отправить заявку</button>
             <p class="program-form__note">

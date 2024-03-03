@@ -6,6 +6,10 @@
   @media (min-width: @tablet-width) {
     row-gap: 65px;
   }
+
+  @media (min-width: @desktop-width) {
+    row-gap: 70px;
+  }
 }
 
 .program-form__fieldset {
@@ -51,6 +55,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    .padding-vertical(0; 0);
     margin-bottom: 0;
   }
 }
@@ -66,6 +71,10 @@
     margin-bottom: 0;
     gap: 13px;
     border: 1px solid @special-400;
+  }
+
+  @media (min-width: @desktop-width) {
+    .padding-vertical(25px; 25px);
   }
 }
 
@@ -96,6 +105,7 @@
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(4, 1fr);
     column-gap: 80px;
+    margin-bottom: 2px;
   }
 }
 
