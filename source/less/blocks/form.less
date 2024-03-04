@@ -13,7 +13,8 @@
   color: @black;
   background-color: @white;
   text-transform: none;
-  width: min-content;
+  width: fit-content;
+  word-break: break-all;
 
   @media (min-width: @tablet-width) {
     .typography(36px; 36px);
@@ -21,6 +22,12 @@
     white-space: nowrap;
     margin-left: -40px;
    }
+
+   @media (min-width: @desktop-width) {
+    br {
+      display: none;
+    }
+  }
 }
 
 .form__legend--contact {
@@ -38,12 +45,16 @@
 }
 
 .form__label {
-  white-space: nowrap;
   position: relative;
 
   &:disabled {
     opacity: 0.3;
   }
+}
+
+.form__label-text {
+  flex-shrink: 0;
+  max-width: 50%;
 }
 
 .form__input {

@@ -13,8 +13,13 @@
   }
 
   @media (min-width: @desktop-width) {
-    max-width: 600px;
     margin-right: 0;
+  }
+}
+
+.main-nav__list--contrast {
+  @media (min-width: @desktop-width) {
+    max-width: 600px;
   }
 }
 
@@ -30,7 +35,6 @@
     .position-absolute(65px);
     left: 0;
     background-color: @white;
-    color:aqua;
   }
 
   .main-nav--closed .main-nav__list {

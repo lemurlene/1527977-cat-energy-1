@@ -18,12 +18,11 @@
   .Oswald();
   .typography(24px; 24px);
   .padding-horizontal(20px; 20px);
-  width: min-content;
+  width: fit-content;
   margin-top: 25px;
   margin-left: -20px;
   color: @black;
   background-color: @white;
-  white-space: nowrap;
 
   @media (min-width: @tablet-width) {
     .typography(36px; 36px);
@@ -48,6 +47,9 @@
 .catalog-additional__list {
   .list-reset();
   .padding-vertical(35px; 35px);
+  .flex();
+  justify-content: center;
+  column-gap: 30px;
 
   @media (min-width: @tablet-width) {
     .padding-vertical(80px; 70px);
