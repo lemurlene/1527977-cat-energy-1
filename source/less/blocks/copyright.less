@@ -1,6 +1,31 @@
 .copyright__link {
   .flex();
   .layout(space-between; center);
+  .padding-vertical(20px; 20px);
   .typography(16px; 20px);
-  color: inherit;
+  width: 100%;
+  color: @special-dark-200;
+
+  &::after {
+    .before-after(27px; 34px);
+    mask-image: url("../img/sprite.svg#htmlAcademy");
+    background-color: @special-600;
+  }
+
+  &:hover,
+  &:focus {
+    outline: transparent;
+
+    &::after {
+      background-color: @basic-brigth;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    column-gap: 23px;
+  }
 }

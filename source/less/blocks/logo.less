@@ -1,5 +1,18 @@
 .logo {
   display: block;
+// Ярослав, подскажи, пожалужйста, можно ли прямо в блок
+// внести flex-shrink что бы не дублировать в шапке и футере?
+  flex-shrink: 0;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+    outline: transparent;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .logo--disabled {

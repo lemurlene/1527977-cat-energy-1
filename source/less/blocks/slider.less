@@ -10,6 +10,7 @@
 
   @media (min-width: @desktop-width) {
     margin-top: 0;
+    margin-left: 10px;
   }
 }
 
@@ -44,18 +45,39 @@
 
 .slider__toggle {
   .position-absolute(0);
-  left: 120px;
+  left: 137px;
   z-index: 2;
-  width: 40px;
+  width: 4px;
 	height: 256px;
   padding: 0;
   border: none;
   cursor: ew-resize;
   color: @special-600;
-  background-color: transparent;
+  background-color: currentColor;
+  border: 1px solid currentColor;
+  border-radius: 2%;
 
   @media (min-width: @tablet-width) {
+    left: 277px;
     height: 512px;
+  }
+
+  &:hover,
+  &:focus {
+    color: @basic-brigth;
+    outline: transparent;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }
 
+.slider__toggle-img {
+  .position-absolute(108px);
+  left: -20px;
+
+  @media (min-width: @tablet-width) {
+    top: 235px;
+  }
+}

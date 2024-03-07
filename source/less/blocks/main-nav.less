@@ -2,6 +2,27 @@
   .hide();
 }
 
+.main-nav__list {
+  .list-reset();
+  .flex();
+  z-index: 1;
+
+  @media (min-width: @tablet-width) {
+    gap: 5px 33px;
+    margin-right: 4px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 0;
+  }
+}
+
+.main-nav__list--contrast {
+  @media (min-width: @desktop-width) {
+    max-width: 600px;
+  }
+}
+
 @media (max-width: (@tablet-width - 1)) {
   .main-nav__list {
     width: 100%;
@@ -14,7 +35,6 @@
     .position-absolute(65px);
     left: 0;
     background-color: @white;
-    color:aqua;
   }
 
   .main-nav--closed .main-nav__list {
@@ -23,10 +43,10 @@
 
   .main-nav__toggle--js {
     .position-absolute(20px);
-    right: 20px;
+    right: 15px;
     width: 24px;
     height: 24px;
-    background-image: url("../img/icon-background/cross.svg");
+    background-image: url("../img/sprite.svg#cross");
     background-color: inherit;
     background-repeat: no-repeat;
     background-position: center;
@@ -44,18 +64,8 @@
   }
 
   .main-nav--closed .main-nav__toggle {
-      background-image: url("../img/icon-background/menu.svg");
-  }
-}
-
-.main-nav__list {
-  .list-reset();
-  .flex();
-  z-index: 1;
-
-  @media (min-width: @tablet-width) {
-    gap: 33px;
-    margin-right: 4px;
+    right: 20px;
+    background-image: url("../img/sprite.svg#menu");
   }
 }
 
@@ -63,15 +73,6 @@
   @media (max-width: (@tablet-width - 1)) {
     width: 100%;
     text-align: center;
-    border-bottom: 1px solid @basic-background-300;
-  }
-
-  &:hover {
-    opacity: 0.6;
-  }
-
-  &:focus {
-    opacity: 0.3;
   }
 }
 
@@ -83,10 +84,22 @@
   .Oswald();
   .typography(20px; 20px);
   .uppercase();
-  .padding-vertical(22px; 23px);
+  .padding-vertical(23px; 23px);
   .padding-horizontal--base();
   display: block;
   color: @black;
+
+  @media (max-width: (@tablet-width - 1)) {
+    position: relative;
+
+    &::after {
+      .position-absolute(66px);
+      .before-after(auto; 1px);
+      left: -20px;
+      right: -20px;
+      background-color: @basic-background-300;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     .padding-horizontal(0; 0);
@@ -95,6 +108,16 @@
 
   @media (min-width: @desktop-width) {
     .typography(20px; 26px);
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+    outline: transparent;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -105,7 +128,7 @@
     @media (min-width: @tablet-width) {
       .position-absolute(auto);
       .before-after(100%; 2px);
-      bottom: 12px;
+      bottom: 16px;
       background-color: @basic-brigth;
     }
   }

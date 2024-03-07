@@ -22,15 +22,15 @@
   }
 
   @media (min-width: @desktop-width) {
-    .padding-vertical(32px; 69px);
+    .padding-vertical(34px; 69px);
     grid-template-columns: repeat(4, 1fr);
     gap: 80px;
   }
 }
 
 .features__item {
+  position: relative;
   display: flex;
-  align-items: center;
   column-gap: 20px;
   width: 100%;
   margin-bottom: 20px;
@@ -72,5 +72,15 @@
       font-size: 280px;
       color: @basic-background-100;
     }
+  }
+}
+
+.features__item-img {
+  .position-absolute(15px);
+  left: 15px;
+
+  @media (min-width: @tablet-width) {
+    top: 65px;
+    left: 25px;;
   }
 }

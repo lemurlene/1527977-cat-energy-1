@@ -1,11 +1,10 @@
-// Ярослав, посмотри, пожалуйста, нормально что для ретины повторяется градиент во всех вариантах?
-
 .gift {
-  .padding-vertical(59px; 43px);
+  .padding-vertical(58px; 43px);
   background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/background/gift.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-color: @basic-brigth;
 
   @media (min-resolution: 2dppx) {
     background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/background/gift@2x.jpg");
@@ -13,7 +12,7 @@
 
   @media (min-width: @tablet-width) {
     .padding-vertical(57px; 60px);
-    .padding-horizontal(125px; 77px);
+    .padding-horizontal(80px; 77px);
     background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/background/gift--tablet.jpg");
     background-position: left top;
 
@@ -45,6 +44,7 @@
     .grid(80px 161px);
     margin-left: 0;
     text-align: left;
+    align-items: center;
     column-gap: 264px;
   }
 
@@ -55,7 +55,7 @@
 
   &::before {
     .before-after(78px; 80px);
-    background-image: url("../img/icon-background/gift.svg");
+    background-image: url("../img/sprite.svg#gift");
     margin: 0 auto 48px;
 
     @media (min-width: @tablet-width) {

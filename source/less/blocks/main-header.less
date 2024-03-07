@@ -6,11 +6,12 @@
 }
 
 .main-header__flex {
-  .flex();
+  display: flex;
   flex-direction: column;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
+    column-gap: 33px;
     align-items: center;
   }
 }
@@ -23,10 +24,11 @@
   @media (min-width: @tablet-width) {
     .padding-vertical(25px; 25px);
     min-height: 50px;
+    align-self: flex-start;
   }
 
   @media (min-width: @desktop-width) {
-    .padding-vertical(55px; 29px);
+    .padding-vertical(55px; 40px);
     min-height: 59px;
   }
 }
