@@ -12,16 +12,17 @@
   }
 }
 
-@media (max-width: (@tablet-width - 1)) {
-  .products__card::before,
-  .products__card:last-of-type::after {
-    .before-after(100vw; 1px);
-    .position-absolute(0);
-    background-color: @basic-background-350;
-    left: -20px;
-  }
+// Поменять - дают горизонтальный скролл
+// @media (max-width: (@tablet-width - 1)) {
+//   .products__card::before,
+//   .products__card:last-of-type::after {
+//     .before-after(100vw; 1px);
+//     .position-absolute(0);
+//     background-color: @basic-background-350;
+//     left: -20px;
+//   }
 
-  .products__card:last-of-type::after {
-    top: 207px;
-  }
-}
+//   .products__card:last-of-type::after {
+//     top: 207px;
+//   }
+// }

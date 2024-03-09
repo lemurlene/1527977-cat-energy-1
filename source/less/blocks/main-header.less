@@ -20,6 +20,7 @@
   .padding-vertical(13px; 14px);
   position: relative;
   min-height: 38px;
+  flex-shrink: 0;
 
   @media (min-width: @tablet-width) {
     .padding-vertical(25px; 25px);
@@ -33,7 +34,7 @@
   }
 }
 
-@media (max-width: (@tablet-width - 1)){
+@media (max-width: (@tablet-width - 1)) {
   .main-header__logo::after {
     .before-after(100vw; 1px);
     .position-absolute(64px);
@@ -43,7 +44,6 @@
 }
 
 .main-header__nav {
-
   @media (min-width: @tablet-width) {
     margin-left: auto;
   }
