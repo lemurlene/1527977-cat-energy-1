@@ -7,7 +7,7 @@
     <link rel="preload" href="fonts/Lato-Regular.woff2" as="font">
     <link rel="preload" href="fonts/Oswald-Regular.woff2" as="font">
     <link rel="preload" href="fonts/Oswald-Medium.woff2" as="font">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple.png">
@@ -110,10 +110,14 @@
             </fieldset>
           </div>
           <div class="form__fieldset program-form__fieldset program-form__fieldset--contact">
+            <div class="overflow">
+              <div class="form-main__container form-main__container--contact">
+                <h2 class="form__legend form__legend--contact title-line">
+                  Контактные данные<br> (владельца кота):
+                </h2>
+              </div>
+            </div>
             <div class="form-main__container">
-              <h2 class="form__legend form__legend--contact">
-                Контактные данные<br> (владельца кота):
-              </h2>
               <div class="program-form__contact-grid">
                 <label class="form__label field">
                   <span class="form__label-text">
@@ -122,7 +126,7 @@
                   <input class="form__input form__input--text" type="email" name="owner-email" placeholder="kuklachev@gmail.com" required>
                   <svg class="form__input-img" width="20" height="20" aria-hidden="true">
                     <use href="img/sprite.svg#email"></use>
-                   </svg>
+                  </svg>
                 </label>
                 <label class="form__label field">
                   <span class="form__label-text">
@@ -131,24 +135,32 @@
                   <input class="form__input form__input--text" type="tel" name="owner-tel" placeholder="8 (960) 900-60-90" required>
                   <svg class="form__input-img" width="16" height="16" aria-hidden="true">
                     <use href="img/sprite.svg#phone"></use>
-                   </svg>
+                  </svg>
                 </label>
               </div>
             </div>
           </div>
           <div class="form__fieldset program-form__fieldset program-form__fieldset--comment">
+            <div class="overflow">
+              <div class="form-main__container">
+                <h2 class="form__legend form__legend--comment title-line">
+                  Комментарий:
+                </h2>
+              </div>
+            </div>
             <div class="form-main__container">
-              <h2 class="form__legend">
-                Комментарий:
-              </h2>
               <textarea class="form__input form__input--textarea" name="comit" placeholder="Расскажите обо всех повадках кота"></textarea>
             </div>
           </div>
           <div class="form__fieldset program-form__fieldset program-form__fieldset--additionally">
+            <div class="overflow">
+              <div class="form-main__container">
+                <h2 class="form__legend form__legend--additionally title-line">
+                  Дополнительно
+                </h2>
+              </div>
+            </div>
             <div class="form-main__container">
-              <h2 class="form__legend form__legend--additionally">
-                Дополнительно
-              </h2>
               <div class="program-form__additionally-grid">
                 <label class="form__label selector">
                   <input class="selector__input selector__input--checkbox" type="checkbox" id="sweetener" name="sweetener" checked>
@@ -222,7 +234,7 @@
                       </span>
                       <svg class="social__button-img" width="27" height="17" aria-hidden="true">
                         <use href="img/sprite.svg#vk"></use>
-                       </svg>
+                      </svg>
                     </a>
                   </li>
                   <li class="social__item">
@@ -232,7 +244,7 @@
                       </span>
                       <svg class="social__button-img" width="24" height="19" aria-hidden="true">
                         <use href="img/sprite.svg#youTube"></use>
-                       </svg>
+                      </svg>
                     </a>
                   </li>
                   <li class="social__item">
@@ -242,7 +254,7 @@
                       </span>
                       <svg class="social__button-img" width="20" height="17" aria-hidden="true">
                         <use href="img/sprite.svg#telegram"></use>
-                       </svg>
+                      </svg>
                     </a>
                   </li>
                 </ul>
@@ -257,6 +269,6 @@
         </div>
       </footer>
     </div>
-    <script src="js/script.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>

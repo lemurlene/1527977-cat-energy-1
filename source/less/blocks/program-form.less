@@ -14,35 +14,7 @@
 
 .program-form__fieldset {
   .flex();
-  position: relative;
   flex-direction: column;
-}
-
-@media (max-width: (@tablet-width - 1)){
-  .program-form__fieldset--basic::after,
-  .program-form__fieldset--purpose::after {
-    .before-after(100vw; 1px);
-    .position-absolute(auto);
-    background-color: @basic-background-400;
-    left: -20px;
-    bottom: -4px;
-  }
-}
-
-.program-form__fieldset--contact,
-.program-form__fieldset--comment,
-.program-form__fieldset--additionally {
-
-  &::before {
-    .before-after(100vw; 2px);
-    .position-absolute(16px);
-    z-index: -1;
-    background-color: @basic-brigth;
-
-    @media (min-width: @tablet-width) {
-      top: 21px;
-    }
-  }
 }
 
 .program-form__fieldset--basic {
@@ -95,7 +67,7 @@
 .program-form__additionally-grid {
   display: grid;
   gap: 13px;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 1fr;
@@ -115,7 +87,6 @@
   margin-top: 21px;
   margin-bottom: 32px;
   color: @black;
-  text-transform: none;
   text-align: center;
 
   @media (min-width: @tablet-width) {

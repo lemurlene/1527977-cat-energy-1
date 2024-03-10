@@ -1,0 +1,42 @@
+.title-line {
+  .heading-reset();
+  .padding-horizontal(20px; 20px);
+  .Oswald();
+  .typography(24px; 26px);
+  position: relative;
+  display: inline-block;
+  margin-left: -20px;
+  margin-bottom: 34px;
+  width: fit-content;
+  word-break: break-all;
+  background: @white;
+  color: @black;
+
+  @media (min-width: @tablet-width) {
+    .typography(36px; 36px);
+    .padding-horizontal(40px; 40px);
+    margin-left: 0;
+    margin-bottom: 80px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: -40px;
+  }
+}
+
+.title-line::after,
+.title-line::before {
+  .before-after(100vw; 2px);
+  .position-absolute(50%);
+  z-index: -1;
+  margin-top: 2px;
+  background: @basic-brigth;
+}
+
+.title-line::after {
+  left: 20px;
+}
+
+.title-line::before {
+  right: 0;
+}

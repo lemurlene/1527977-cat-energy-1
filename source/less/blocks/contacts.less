@@ -65,11 +65,28 @@
   display: block;
   min-height: 362px;
   width: 100%;
-  background-image: url("../img/map-mobile.jpg");
+  background-image: url("../img/background/map.jpg");
   background-repeat: no-repeat;
   border: none;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/background/map@2x.jpg");
+  }
+
   @media (min-width: @tablet-width) {
     min-height: 400px;
+    background-image: url("../img/background/map--tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/map--tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/background/map--desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/map--desktop@2x.jpg");
+    }
   }
 }
