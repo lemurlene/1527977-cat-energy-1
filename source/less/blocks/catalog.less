@@ -17,3 +17,16 @@
     margin-top: 32px;
   }
 }
+
+@media (max-width: (@tablet-width - 1)) {
+  .catalog__title {
+    position: relative;
+  }
+
+  .catalog__title::after {
+    .before-after(100vw; 1px);
+    .position-absolute(75px);
+    background-color: @basic-background-300;
+    left: -20px;
+  }
+}

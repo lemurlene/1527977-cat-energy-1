@@ -11,7 +11,7 @@ import rename from 'gulp-rename';
 import squoosh from 'gulp-libsquoosh';
 import svgmin from 'gulp-svgmin';
 import {deleteAsync} from 'del';
-import { stacksvg } from "gulp-stacksvg"
+import {stacksvg} from 'gulp-stacksvg';
 
 export const styles = () => {
   return gulp.src('source/less/style.less', { sourcemaps: true })
@@ -47,7 +47,6 @@ const copyImages = () => {
 
 const optimizeImages = () => {
   return gulp.src('source/img/**/*.{png,jpg}')
-
     .pipe(squoosh())
     .pipe(gulp.dest('build/img'))
 }
@@ -111,6 +110,20 @@ const watcher = () => {
   gulp.watch('source/*.html', gulp.series(html, reload));
 }
 
+export const build = gulp.series(
+  clean,
+  copy,
+  optimizeImages,
+  gulp.parallel(
+  styles,
+  html,
+  scripts,
+  svg,
+  sprite,
+  createWebp
+  ),
+);
+
 export default gulp.series(
   clean,
   copy,
@@ -127,17 +140,3 @@ export default gulp.series(
     server,
     watcher
 ));
-
-export const build = gulp.series(
-  clean,
-  copy,
-  optimizeImages,
-  gulp.parallel(
-  styles,
-  html,
-  scripts,
-  svg,
-  sprite,
-  createWebp
-  ),
-);

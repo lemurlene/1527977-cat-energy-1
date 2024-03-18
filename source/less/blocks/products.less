@@ -4,7 +4,7 @@
 
   @media (min-width: @tablet-width) {
     width: 324px;
-    margin-top: 80px;
+    margin-top: 78px;
   }
 
   @media (min-width: @desktop-width) {
@@ -12,17 +12,12 @@
   }
 }
 
-// Поменять - дают горизонтальный скролл
-// @media (max-width: (@tablet-width - 1)) {
-//   .products__card::before,
-//   .products__card:last-of-type::after {
-//     .before-after(100vw; 1px);
-//     .position-absolute(0);
-//     background-color: @basic-background-350;
-//     left: -20px;
-//   }
-
-//   .products__card:last-of-type::after {
-//     top: 207px;
-//   }
-// }
+@media (max-width: (@tablet-width - 1)) {
+  .products__card::after {
+    .before-after(320px; 1px);
+    .position-absolute(auto);
+    bottom: 0;
+    background-color: @basic-background-350;
+    left: -20px;
+  }
+}

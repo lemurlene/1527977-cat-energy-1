@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="кот, кошка, питание, похудение, набор массы, онлайн, еда, дилеры">
+    <meta name="description" content="Функциональное питание для котов кошек онлайн-магазин дилеры">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="preload" href="fonts/Lato-Regular.woff2" as="font">
     <link rel="preload" href="fonts/Oswald-Regular.woff2" as="font">
@@ -189,7 +191,7 @@
                   <source type="image/webp" srcset="img/pictures/slider-cat-before.webp 1x, img/pictures/slider-cat-before@2x.webp 2x" width="280" height="256">
                   <source media="(min-width: 768px)" srcset="img/pictures/slider-cat-before--tablet.png 1x, img/pictures/slider-cat-before--tablet@2x.png 2x" width="560" height="512">
                   <img class="slider__img" src="img/pictures/slider-cat-before.png" srcset="img/pictures/slider-cat-before@2x.png 2x"
-                  width="280" height="256"
+                  width="280" height="256" loading="lazy"
                   alt="Кот-пухляш">
                 </picture>
                 <picture class="slider__slide slider__slide--after">
@@ -197,7 +199,7 @@
                   <source type="image/webp" srcset="img/pictures/slider-cat-after.webp 1x, img/pictures/slider-cat-after@2x.webp 2x" width="280" height="256">
                   <source media="(min-width: 768px)" srcset="img/pictures/slider-cat-after--tablet.png 1x, img/pictures/slider-cat-after--tablet@2x.png 2x" width="560" height="512">
                   <img class="slider__img" src="img/pictures/slider-cat-after.png" srcset="img/pictures/slider-cat-after@2x.png 2x"
-                  width="280" height="256"
+                  width="280" height="256" loading="lazy"
                   alt="Кот-худыш">
                 </picture>
                 <button class="slider__toggle" type="button">
@@ -227,8 +229,20 @@
             </div>
           </div>
           <div class="contacts__map">
-            <iframe class="contacts__map-iframe" src="https://yandex.ru/map-widget/v1/?ll=30.323037%2C59.938631&mode=whatshere&whatshere%5Bpoint%5D=30.323037%2C59.938631&whatshere%5Bzoom%5D=17&z=16">
+            <iframe class="contacts__map-iframe" src="https://yandex.ru/map-widget/v1/?ll=30.323037%2C59.938631&mode=whatshere&whatshere%5Bpoint%5D=30.323037%2C59.938631&whatshere%5Bzoom%5D=17&z=16" title="Map" loading="lazy">
             </iframe>
+            <noscript>
+              <picture>
+                <source type="image/webp" media="(min-width: 769px)" srcset="img/pictures/map--big.webp 1x, img/pictures/map--big@2x.webp 2x" width="1440" height="400">
+                <source type="image/webp" media="(min-width: 321px)" srcset="img/pictures/map--middle.webp 1x, img/pictures/map@2x--middle.webp 2x" width="768" height="400">
+                <source type="image/webp" srcset="img/pictures/map.webp 1x, img/pictures/map@2x.webp 2x" width="320" height="362">
+                <source media="(min-width: 769px)" srcset="img/pictures/map--big.jpg 1x, img/pictures/map--big@2x.jpg 2x" width="1440" height="400">
+                <source media="(min-width: 321px)" srcset="img/pictures/map--middle.jpg 1x, img/pictures/map--middle@2x.jpg 2x" width="768" height="400">
+                <img  class="contacts__map-img" src="img/pictures/map.jpg" srcset="img/pictures/map@2x.jpg 2x"
+                width="320" height="362"
+                alt="Мы на карте: напротив Михайловского театра, между набережной Мойки и каналом Грибоедова.">
+              </picture>
+            </noscript>
           </div>
         </div>
         <div class="main-footer__links">
