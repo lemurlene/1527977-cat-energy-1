@@ -76,8 +76,18 @@
   }
 }
 
+.contacts__map-iframe--no-js {
+  display: none;
+}
+
 .contacts__map-img {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  min-height: 362px;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    min-height: 400px;
+  }
 }

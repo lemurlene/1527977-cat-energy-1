@@ -4,23 +4,37 @@
 }
 
 .program__pic {
-  .position-absolute(auto);
+  .position-absolute(20px);
   .layout(center; center);
   display: flex;
-  width: 90px;
-  height: 96px;
+  left: 11px;
+  width: 67px;
+  height: 53px;
 
   @media (min-width: @tablet-width) {
-    top: 130px;
-    right: 120px;
+    top: 152px;
+    right: 130px;
+    left: auto;
     z-index: 2;
     transform: scale(4);
   }
 
   @media (min-width: @desktop-width) {
-    top: 43px;
-    left: 58px;
+    top: 63px;
+    left: 68px;
     transform: scale(2);
+  }
+}
+
+.program__pic--pro {
+  top: 22px;
+
+  @media (min-width: @tablet-width) {
+    top: 163px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 68px;
   }
 }
 
