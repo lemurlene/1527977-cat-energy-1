@@ -12,6 +12,7 @@ import squoosh from 'gulp-libsquoosh';
 import svgmin from 'gulp-svgmin';
 import {deleteAsync} from 'del';
 import {stacksvg} from 'gulp-stacksvg';
+import pug from 'gulp-pug';
 
 export const styles = () => {
   return gulp.src('source/less/style.less', { sourcemaps: true })
@@ -30,6 +31,20 @@ const html = () => {
   return gulp.src('source/*.html')
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('build'));
+}
+
+const pug2html = () => {
+  return gulp.src('source/*.pug')
+    .pipe(plumber())
+    .pipe(pug())
+    // .pipe(prettify({
+    //   indent_size: 2,
+    //   indent_char: ' ',
+    //   inline: [], // перенос строки для всех инлайн элементов
+    //   end_with_newline: true // перенос строки в конце файла
+    // }))
+    .pipe(gulp.dest('build'))
+    .pipe(browser.stream());
 }
 
 const scripts = () => {
@@ -107,7 +122,8 @@ const reload = (done) => {
 const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
   gulp.watch('source/js/*.js', gulp.series(scripts));
-  gulp.watch('source/*.html', gulp.series(html, reload));
+  // gulp.watch('source/*.html', gulp.series(html, reload));
+  gulp.watch('source/**/*.pug', gulp.series(pug2html, reload));
 }
 
 export const build = gulp.series(
@@ -116,7 +132,7 @@ export const build = gulp.series(
   optimizeImages,
   gulp.parallel(
   styles,
-  html,
+  pug2html,
   scripts,
   svg,
   sprite,
@@ -130,7 +146,7 @@ export default gulp.series(
   copyImages,
   gulp.parallel(
     styles,
-    html,
+    pug2html,
     scripts,
     svg,
     sprite,
