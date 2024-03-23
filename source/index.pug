@@ -1,10 +1,58 @@
 extends pug/layout.pug
 
+block var
+  - const pageCurrent = pages.index.href;
+
 block meta
-  title Главная
+  title Кэт энерджи Главная
+
 block header
-  p lorm1
+  +main-header({
+    hasMain: true
+  })
 block content
   main
+    .hero
+      .container
+        .hero__grid
+          .hero__content
+            h1.hero__title Функциональное #[br] питание для котов
+            p.hero__slogan Занялся собой? Займись котом!
+          picture.hero__picture
+            source(type='image/webp' media='(min-width: 1440px)' srcset='../img/products/chicken-500--hero-desktop.webp 1x, img/products/chicken-500--hero-desktop@2x.webp 2x' width='552' height='499')
+            source(type='image/webp' media='(min-width: 768px)' srcset='../img/products/chicken-500--hero-tablet.webp 1x, img/products/chicken-500--hero-tablet@2x.webp 2x' width='709' height='609')
+            source(type='image/webp' srcset='../img/products/chicken-500--hero.webp 1x, img/products/chicken-500--hero@2x.webp 2x' width='280' height='270')
+            source(media='(min-width: 1440px)' srcset='../img/products/chicken-500--hero-desktop.png 1x, img/products/chicken-500--hero-desktop@2x.png 2x' width='552' height='499')
+            source(media='(min-width: 768px)' srcset='../img/products/chicken-500--hero-tablet.png 1x, img/products/chicken-500--hero-tablet@2x.png 2x' width='709' height='609')
+            img.hero__img(src='../img/products/chicken-500--hero.png' srcset='img/chicken-500--hero@2x.png 2x' width='280' height='270' alt='500 грамм корма в банке с жёлто-оранжевой этикеткой на блюде с курицей.')
+          a.hero__button.button(href='form.html') Подобрать программу
+    +programs
+      -
+        const programs = [
+          {
+            title: 'Похудение',
+            text: 'Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.',
+            icon: 'cat-slim',
+            textLink: 'slim',
+          },
+          {
+            title: 'Набор массы',
+            text: 'Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!',
+            icon: 'cat-pro',
+            textLink: 'pro',
+            widthImg: 63,
+            heightImg: 28
+          },
+        ]
+      ul.programs__list
+        each item in programs
+          li.programs__item
+            +program({
+              title: item.title,
+              text: item.text,
+              icon: item.icon,
+              textLink: item.textLink,
+              widthImg: item.widthImg,
+              heightImg: item.heightImg
+            })
 block footer
-

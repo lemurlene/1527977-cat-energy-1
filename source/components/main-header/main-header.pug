@@ -1,0 +1,37 @@
+-
+  const navMenu = [
+    {
+      text: pages.index.text,
+      href: pages.index.href,
+    },
+    {
+      text: pages.catalog.text,
+      href: pages.catalog.href,
+    },
+    {
+      text: pages.form.text,
+      href: pages.form.href,
+    }
+  ]
+
+mixin main-header({hasMain})
+  - const listContrast = !!hasMain ? `main-nav__list--contrast` : '';
+  - const linkContrast = !!hasMain ? `main-nav__link--contrast` : '';
+  - const hasLogoDisabled = !!hasMain ? 'logo--disabled' : '';
+  header.main-header
+    .container
+      .main-header__flex
+        a.main-header__logo.logo(class=hasLogoDisabled href=pages.index.href aria-current='page')
+          picture
+            source(media='(min-width: 1200px)' srcset='../img/logo/logo-pic-desktop.svg' width='202' height='59')
+            source(media='(min-width: 768px)' srcset='../img/logo/logo-pic-tablet.svg' width='174' height='50')
+            img.main-header__logo-img.logo__img(src='../img/logo/logo-pic-mobile.svg' width='190' height='38' aria-hidden='true' alt='Логотип Кэт энерджи.')
+        nav.main-header__nav.main-nav
+          button.main-nav__toggle.toggle(type='button')
+            span.visually-hidden Открыть меню
+          ul.main-nav__list(class=listContrast)
+            each item in navMenu
+              - const classCurrentLi = item.href === pageCurrent ? 'main-nav__item--current' : '';
+              - const classCurrentLink = item.href === pageCurrent ? 'main-nav__link--current' : '';
+              li.main-nav__item(class=classCurrentLi)
+                a.main-nav__link(href=item.href, class=[linkContrast, classCurrentLink] )= item.text

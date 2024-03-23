@@ -1,0 +1,8 @@
+mixin program({title, text, icon, textLink, widthImg=36, heightImg=50})
+  .program&attributes(attributes)
+    .program__pic
+      img.program__img(src=`../img/pictures/${icon}.svg` width=widthImg height=heightImg alt=title)
+    .program__container
+      h3.program__caption=title
+      p.program__text= text
+      a.program__link(href=pages.catalog.href)= `Каталог ${textLink}`

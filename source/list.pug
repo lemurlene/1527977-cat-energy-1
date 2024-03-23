@@ -1,0 +1,20 @@
+extends pug/layout.pug
+
+block var
+
+
+block meta
+  title Кэт энерджи Форма
+
+block header
+  +main-header({})
+block content
+  main
+    fieldset
+      legend Список страниц
+      ol
+        each item in pages
+          li
+            a(href=item.href)= item.text
+
+block footer
