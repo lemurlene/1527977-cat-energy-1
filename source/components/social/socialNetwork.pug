@@ -1,0 +1,6 @@
+mixin socialNetwork({href, name, widthImg=27, heightImg=17})
+  .socialNetwork&attributes(attributes)
+    a.social__button(href=`https://${href}` target='_blank' rel='noreferrer noopener')
+      span.visually-hidden = name
+      svg.social__button-img(width=widthImg height=heightImg aria-hidden='true')
+        use(href=`img/sprite.svg#${name}`)

@@ -1,0 +1,57 @@
+mixin main-footer({hasMain})
+  - const contactsMain = !!hasMain ? `contacts--main` : '';
+  - const hasLogoDisabled = !!hasMain ? 'logo--disabled' : '';
+  footer.main-footer
+  .contacts
+    .container
+      .contacts__text
+        p.contacts__intro Приглашаем к&nbsp;сотрудничеству дилеров!
+        address.contacts__address ул.&nbsp;Большая Конюшенная,&nbsp;д.&nbsp;19/8
+          span.contacts__address-city Санкт-Петербург
+    .contacts__map
+      iframe.contacts__map-iframe.contacts__map-iframe--no-js(src='https://yandex.ru/map-widget/v1/?ll=30.323037%2C59.938631&mode=whatshere&whatshere%5Bpoint%5D=30.323037%2C59.938631&whatshere%5Bzoom%5D=17&z=16' title='Map' loading='lazy')
+      noscript
+        picture
+          source(type='image/webp' media='(min-width: 769px)' srcset='img/pictures/map--big.webp 1x, img/pictures/map--big@2x.webp 2x' width='1440' height='400')
+          source(type='image/webp' media='(min-width: 321px)' srcset='img/pictures/map--middle.webp 1x, img/pictures/map--middle@2x.webp 2x' width='768' height='400')
+          source(type='image/webp' srcset='img/pictures/map.webp 1x, img/pictures/map@2x.webp 2x' width='320' height='362')
+          source(media='(min-width: 769px)' srcset='img/pictures/map--big.jpg 1x, img/pictures/map--big@2x.jpg 2x' width='1440' height='400')
+          source(media='(min-width: 321px)' srcset='img/pictures/map--middle.jpg 1x, img/pictures/map--middle@2x.jpg 2x' width='768' height='400')
+          img.contacts__map-img(src='img/pictures/map.jpg' srcset='img/pictures/map@2x.jpg 2x' width='320' height='362' loading='lazy' alt='Мы на карте: напротив Михайловского театра, между набережной Мойки и каналом Грибоедова.')
+  .main-footer__links
+    .container
+      ul.main-footer__list
+        li.main-footer__item
+          a.main-footer__logo.logo(class=hasLogoDisabled href=pages.index.href aria-current='page')
+            img.logo__img(src='img/logo/logo-text.svg' width='128' height='24' aria-hidden='true' alt='Логотип Кэт энерджи - ссылка на главную.')
+        li.main-footer__item.social
+          -
+            const socialNetworks = [
+              {
+                href: 'vk.com/htmlacademy',
+                name: 'vk',
+              },
+              {
+                href: 'www.youtube.com/user/htmlacademyru',
+                name: 'youTube',
+                widthImg: 24,
+                heightImg: 19,
+              },
+              {
+                href: 't.me/htmlacademy',
+                name: 'telegram',
+                widthImg: 20,
+                heightImg: 17
+              }
+            ]
+          ul.social__list
+            each item in socialNetworks
+              li.social__item
+                +socialNetwork({
+                  href: item.href,
+                  name: item.name,
+                  widthImg: item.widthImg,
+                  heightImg: item.heightImg
+                })
+        li.main-footer__item.main-footer__item--copyright.copyright
+          a.copyright__link(href='https://htmlacademy.ru/intensive/adaptive' target='_blank' rel='noreferrer noopener') HTML Academy
